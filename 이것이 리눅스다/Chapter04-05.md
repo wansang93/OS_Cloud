@@ -12,26 +12,26 @@ root라는 사용자가 기본적으로 있고 super user라고 불림
 
    다음과 같은 형식으로 저장되어 있음
 
-   **user_name** : **password** : **user_id** : **group** : **full_name** : **home_diretory** : **base_shell**
+   **user_name** : **hashed password** : **user_id** : **group** : **full_name** : **home_diretory** : **base_shell**
 
    ![04-05user_form](./assets/04-05user_form.png)
 
 2. 사용자 비밀번호 파일 열어보기: ```vi  /etc/shadow```
 
-   **group_name** : **password** : **group_id** : **users_in_group**
+   **group_name** : **hashed password** : **group_id** : **users_in_group**
 
    ![04-05pw_form](./assets/04-05pw_form.png)
 
 3. 사용자 그룹 관련 명령어
 
-   - ```user add```:
-   - ```passwd```
-   - usermod
-   - userdel
-   - change
-   - groups
-   - groupadd
-   - groupmod
+   - ```user add <username>```: 사용자 추가하기
+   - ```passwd <username>```: 사용자 비밀번호 지정 또는 변경
+   - ```usermod -g root newuser```: 사용자의 속성을 변경
+   - ```userdel <username>```: 사용자를 삭제
+   - ```change -m 2 <username>```: 사용자의 암호를 2달 간격으로 변경하게 설정
+   - ```groups```: 현재 사용자가 속한 그룹을 보여줌
+   - ```groupadd <groupname>```: 새로운 그룹을 생성
+   - ```groupmod -n <groupname> <othergroupname>```: 그룹 속성 변경
 
 4. [실습7] 사용자와 그룹 관리 연습
 
