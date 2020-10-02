@@ -47,10 +47,10 @@
 
    VMware에서 자동으로 마운트하지 않기 때문에 우리가 직접 해주어야 합니다.
 
-   관례적으로 ```/midia/``` 디렉토리로 마운트을 합니다.
+   관례적으로 ```/media/``` 디렉토리로 마운트을 합니다.
 
-   1. ```cd /midia/```: 미디어 디렉토리로 들어갑니다.
+   1. ```cd /media/```: 미디어 디렉토리로 들어갑니다.
    2. ```mkdir cdrom```, ```mkdir usb```: cdrom, usb 디렉토리를 생성합니다.
    3. ```mount  /dev/cdrom  /media/cdrom```: mount 주소를 meida/cdrom으로 바꿉니다.
-   4. ```cd /meida/cdrom/```: 마운트 된 주소로 들어가면 CD를 조작할 수 있습니다.
+   4. ```cd /media/cdrom/```: 마운트 된 주소로 들어가면 CD를 조작할 수 있습니다.
    5. ```cd``` -> ```umount /dev/cdrom```: 사용이 끝나면 디렉토리를 빠져나오고 umount를 해줍니다.

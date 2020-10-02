@@ -24,9 +24,9 @@ root라는 사용자가 기본적으로 있고 super user라고 불림
 
 3. 사용자 그룹 관련 명령어
 
-   - ```user add <username>```: 사용자 추가하기
+   - ```useradd <username>```: 사용자 추가하기
    - ```passwd <username>```: 사용자 비밀번호 지정 또는 변경
-   - ```usermod -g root newuser```: 사용자의 속성을 변경
+   - ```usermod <option> <username>```: 사용자의 속성을 변경
    - ```userdel <username>```: 사용자를 삭제
    - ```change -m 2 <username>```: 사용자의 암호를 2달 간격으로 변경하게 설정
    - ```groups```: 현재 사용자가 속한 그룹을 보여줌

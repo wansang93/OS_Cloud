@@ -36,33 +36,33 @@ vi test
 ls /var
 :wq -->
 ls -l test
-whoami
+whoami  # 현재 사용자를 알려줌
 ./test
-chmod 755 test  -> test mode
-./test
+chmod 755 test  # 755 로 모드 변경
+./test  # 모드 변경 후 실행 가능
 touch test2
 ls -l test*
-chmod u+x test2
+chmod u+x test2  # test2 파일을 user에게 실행 권한을 +(줌)
 ls -l test*
-chmod g+x test2
-chmod o+x test2
+chmod g+x test2  # test2 파일을 group에게 실행 권한을 +
+chmod o+x test2  # test2 파일을 other에게 실행 권한을 +
 ls -l test*
-chmod ugo-x test2
+chmod ugo-x test2  # # test2 파일을 user에게 실행 권한을 -(없엠)
 ls -l test*
 chmod ug-rw test2
 ls -l test*
 chown centos test
 chgrp centos test
 pwd
-su - centos
+su - centos  # 사용자를 centos로 변경
 whoami
 pwd
 ls -l /root
-ls -ld /root: d옵션 체크하기
+ls -ld /root # ld옵션: 디렉토리만 표시
 exit
 whoami
 ls -l test
-mv test ~centos
+mv test ~centos  # ~사용자는 사용자 계정의 디렉토리를 뜻함
 ls -l test
 su - centos
 pwd

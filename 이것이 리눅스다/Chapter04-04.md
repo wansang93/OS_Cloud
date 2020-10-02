@@ -18,7 +18,7 @@
 - ```rmdir <directoryname>```: 폴더 모두 지우기(빈 폴더만)
 - ```rm -rf <directoryname>```: 폴더 모두 지우기(매우 위험)
 - ```rm <filename>```: remove
-- ```cp <destination> <rename>```: copy
+- ```cp <filename> <rename> <destination>```: copy
 - ```mv <filename> <destination>```: move
 - ```touch <filename>```: 빈 파일로 만들기
 
