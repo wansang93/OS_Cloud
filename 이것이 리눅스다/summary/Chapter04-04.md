@@ -1,6 +1,6 @@
 ## 04-04 필수개념과 명령어-리눅스 기본 명령어
 
-명령어 목록
+### 명령어 목록
 
 파일 및 경로 보기
 
@@ -12,11 +12,15 @@
 - ```pwd```: print working directory
 - ```clear```: 콘솔 창 깨끗이 하기
 
-디렉토리 및 파일 관리
+디렉토리 관리
 
 - ```mkdir <directoryname>```: make directory
+- ```mkdir - p aa/bb/cc/dd```: aa안에 bb안에 cc안에 dd 만들기
 - ```rmdir <directoryname>```: 폴더 모두 지우기(빈 폴더만)
-- ```rm -rf <directoryname>```: 폴더 모두 지우기(매우 위험)
+- ```rm -rf <directoryname>```: 폴더 모두 지우기(매우 위험), -r 전부 지우기, -f 강제로
+
+파일 관리
+
 - ```rm <filename>```: remove
 - ```cp <filename> <rename> <destination>```: copy
 - ```mv <filename> <destination>```: move

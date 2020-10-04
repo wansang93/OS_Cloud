@@ -86,6 +86,8 @@ mylink -> [Chapter04-04](Chapter04-04.md)
   - ```groupadd <group_name>```: create group
   - ```groupdel <group_name>```: delete group
 
+- when you edit ```/etc/skel```, those files will be copied to new user by default
+
 ### 04-06 Permissions & Owners, Link 
 
 - set permissions

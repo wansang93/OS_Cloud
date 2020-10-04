@@ -72,7 +72,7 @@ chown root.root test
 exit
 ```
 
-![결과1](./assets/04-06실습결과1.png)
+![실습8 결과1](./assets/04-06실습결과1.png)
 
 ### 링크
 
@@ -96,4 +96,4 @@ mv basefile ../ .
 ls -il
 ```
 
-![결과2](./assets/04-06실습결과2.png)
+![실습9 결과2](./assets/04-06실습결과2.png)

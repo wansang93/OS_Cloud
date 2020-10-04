@@ -35,7 +35,7 @@ root라는 사용자가 기본적으로 있고 super user라고 불림
 
 4. [실습7] 사용자와 그룹 관리 연습
 
-   - 사용자와 그룹의 Create / Update / Delete 명령어 연습 
+   - 사용자와 그룹의 Create / Update / Delete 명령어 연습한다.
    - 사용자와 그룹의 관련 파일들을 파악(Read)한다.
 
    사용자 만들고 읽고 삭제하기
@@ -45,7 +45,7 @@ root라는 사용자가 기본적으로 있고 super user라고 불림
       - Read groups: ```tail -5 /etc/group```
       - Delete user1: ```userdel  -r  user1```
 
-   ![결과](./assets/04-05실습결과1.png)
+   ![실습7 결과1](./assets/04-05실습결과1.png)
 
    사용자 그룹 만들고 읽고 사용자 패스워드 설정 및 읽기
 
@@ -54,7 +54,7 @@ root라는 사용자가 기본적으로 있고 super user라고 불림
       - Creat user1 in groupname: ```useradd -g <groupname> user1```
       - Set user1 password: ```passwd user1```
 
-   ![결과2](./assets/04-05실습결과2.png)
+   ![실습7 결과2](./assets/04-05실습결과2.png)
 
    그룹 만들기, 그룹에 속한 유저 만들기, 유저 비밀번호 설정
 
@@ -62,4 +62,4 @@ root라는 사용자가 기본적으로 있고 super user라고 불림
       - How to create user: 유저는 ```/etc/skel``` 에 있는 파일들이 복사가 되서 만들어 집니다.
       - Delete group: ```groupdel <groupname>``` 으로 삭제하는데 그 그룹에 속한 유저가 없어야 합니다.
 
-   ![결과3](assets/04-05실습결과3.png)
+   ![실습7 결과3](assets/04-05실습결과3.png)

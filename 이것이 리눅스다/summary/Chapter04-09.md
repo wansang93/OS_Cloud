@@ -27,9 +27,9 @@
 파일 위치 검색
 
 1. find
-   - 명령어: ```find {경로} {옵션} {조건} {action}```
-     - {옵션}: ```-name```, ```user {user_name}```, ```newer {전유저, 다음유저}```, ```-perm {허가권}```, ```-size {사이즈 크기}```
+   - 명령어: ```find <경로> <옵션> <조건> <action>```
+     - {옵션}: ```-name```, ```user <user_name>```, ```newer <전유저, 다음유저>```, ```-perm <허가권>```, ```-size <사이즈 크기>```
      - {action}: ```print```(기본), ```-exec 명령어 {} \;```(외부 명령 실행)
-2. ```which {file_name}```: PATH에 설정된 디렉터리만 검색
-3. ```whereis {file_name}```: 실행 파일, 소스, man페이지 파일 검색
-4. ```locate {file_name}```: 파일 목록 데이터베이스에서 검색
+2. ```which <file_name>```: PATH에 설정된 디렉터리만 검색
+3. ```whereis <file_name>```: 실행 파일, 소스, man페이지 파일 검색
+4. ```locate <file_name>```: 파일 목록 데이터베이스에서 검색
