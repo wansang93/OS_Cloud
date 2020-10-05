@@ -109,3 +109,17 @@ mylink -> [Chapter04-04](Chapter04-04.md)
 
 
 ### 04-08 DNF for easy installing package
+
+### 04-09 Zip, Tar and Find files
+
+### 04-10 System Settings, CRON and AT
+
+### 04-11 Network Essential Concepts and Related Files
+
+### 04-12 nmtui Command Practice and SELinux Concept
+
+### 04-13 Pipe filter Redirection, Processes, Services and Sockets
+
+### 04-14 Emergency Recovery, GRUB Bootloader
+
+### 04-15 Kernel Compile
