@@ -20,6 +20,8 @@
 
 ### 프로세스, 데몬
 
+데몬: 백그라운드 프로세스의 일종, 사용자의 요청을 기다리고 있다가 요청이 발생하면 이에 적절히 대응하는 리스너와 같은 역할
+
 프로세스
 
 - 정의: 하드디스크에 지정된 프로그램이 메모리에 로딩되 활성화 된 것
@@ -76,13 +78,12 @@ gedit &  # gedit을 백그라운드로 실행해라
 
 - 시스템과 독자적으로 구동되어 제공하는 프로세스
   - 예) web server(httpd), DB server(mysqld), FTP server(vsftpd)
-- 실행 및 종료는 ```systemctl start/stop/restart <service name>```
-- 서비스의 실행 스크립트 파일은 대부분 ```/usr/lib/systemd/system/``` 디렉토리에 있고 ```<service name>.service```의 이름으로 확인 할 수 있음
+- 실행 및 종료는 ```systemctl <start|stop|restart> <service_name>```
+- 서비스의 실행 스크립트 파일은 대부분 ```/usr/lib/systemd/system/``` 디렉토리에 있고 ```<service_name>.service```의 이름으로 확인 할 수 있음
   - 예) Cron 서비스(자동 백업)는 ```crond.service``` 라는 이름으로 존재
 
 소켓
 
 - 서비스는 항상 가동되지만, 소켓은 외부에서 특정 서비스를 요청할 경우에 systemd가 구동함, 요청이 끝나면 소켓도 종료
-- 예) 텔넷 서버
-- 소켓 스크립트 파일은 ```/usr/lib/systemd/system/``` 디렉토리에 있고 ```<socket name>.socket``` 이라는 이름으로 존재
-
+  - 예) 텔넷 서버
+- 소켓 스크립트 파일은 ```/usr/lib/systemd/system/``` 디렉토리에 있고 ```<socket_name>.socket``` 이라는 이름으로 존재

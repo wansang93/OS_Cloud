@@ -28,7 +28,7 @@
 - ```nmtui```
   - 네트워크와 관련된 대부분의 작업을 이 명령어에서 수행
   - 텍스트 기반으로 작동
-- ```systemctl <start/stop/restart/status> NetworkManager```
+- ```systemctl <start|stop|restart|status> NetworkManager```
   - 네트워크의 설정을 변경한 후에 변경된 내용을 시스템에 적용
 - ```ifup <장치이름>```, ```ifdown <장치이름>```
   - 네트워크 장치 On, Off
@@ -36,7 +36,7 @@
   - 네트워크 장치의 IP주소 설정
 - ```nslookup```
   - DNS 서버의 작동을 테스트
-- ```ping <ip주소 또는 URL>```
+- ```ping <ip주소|URL>```
   - 해당 컴퓨터가 네트워크상에서 응답하는지를 테스트
 
 ### 네트워크 설정과 관련된 주요 파일

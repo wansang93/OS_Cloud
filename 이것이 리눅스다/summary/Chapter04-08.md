@@ -18,6 +18,8 @@ DNF 기본적인 사용법
 - ```dnf update <package_name>```: 패키지 업데이트 하기
 - ```dnf info <package_name>```: 패키지 정보 확인
 
+![04-08dnf개념](./assets/04-08dnf개념.png)
+
 [실습11] dnf 기본연습
 
 ``` bash

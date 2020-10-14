@@ -3,8 +3,9 @@
 ### 시스템 설정
 
 시간: 설정 -> 자세히 보기 -> 날짜 및 시간 -> 표준 시간대 자동
+네트워크 설정: ```nmtui```
 방화벽: ```firewall-config```
-서비스 켜기/끄기: ```ntsysv```
+서비스 설정 켜기/끄기: ```ntsysv```
 
 ### CRON과 AT
 
@@ -28,7 +29,8 @@
 
 ``` bash
 # 1. cron
-wget http://download.hanbit.co.kr/centos/8/openrdate-1.2-14.fc30.x86_64.rpm  #  시간설정rpm 파일 다운로드(시간을 바꿔 업데이트 됬는지 확인)
+#  시간설정rpm 파일 다운로드(시간을 바꿔 업데이트 됬는지 확인)
+wget http://download.hanbit.co.kr/centos/8/openrdate-1.2-14.fc30.x86_64.rpm
 dnf -y install openrdate-1.2-14.fc30.x86_64.rpm  # rpm 파일로 다운로드
 systemctl status crond  # crond 작동 확인
 systemctl start crond  # crond 작동이 안될 경우 시작

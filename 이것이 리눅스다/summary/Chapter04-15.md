@@ -30,7 +30,7 @@ cd 다운로드/
 mv linux-5.3.11.tar.xz /usr/src/
 cd /usr/src
 ls
-tar xfz linux-5.3.11.tar.gz
+tar Jxvf linux-5.3.11.tar.xz
 ls -l
 cd linux-5.3.11/
 pwd
@@ -52,11 +52,12 @@ vi .config  # .config 열어서 수정
     :wq
 make clean  # 이전 정보 삭제
 
-# 7. 커널 컴파일 및 설치(시간이 정말 오래 걸리니 설치를 잘하길)
-make; make modules_install; make install;
+# 7. 커널 컴파일 및 설치(시간이 정말 오래 걸리니 오타를 조심)
+make; make modules_install; make install
 
 # 8. 설치 완료 후 확인
 ls -l /lib/modules
 reboot
-# 추가된 것을 보고 접속 후 버전확인
+# 추가된 것을 보고 접속 후 터미널로 들어가서 버전확인
+uname -r
 ```
