@@ -1,6 +1,7 @@
 # 이것이 리눅스다(CentOS 8)
 
-2020-09-19 ~ 
+- 2020-09-19 ~ 2020-10-20 (Chapter05)
+- 2020-10-23 ~ (Chpater06)
 
 강의 링크 -> [https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN](https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN)
 
@@ -32,7 +33,9 @@
   - [05-04 리눅스에서 Windows응용 프로그램 실행](./summary/Chapter05-04.md)
 - [Chapter 06 하드디스크 관리](./summary/Chapter06%20Summary.md)
   - [06-01 IDE 및 SCSI 장치 개념, 하드디스크 1개 추가](./summary/Chapter06-01.md)
-  - 
+  - [06-02 하드디스크 관리-RAID 개념1(Linear, RAID0, RAID1)](./summary/Chapter06-02.md)
+  - [06-03 하드디스크 관리-RAID 개념2(RAID5, RAID6, RAID 10)](./summary/Chapter06-03.md)
+
 ## 책 정보
 
 ![book cover](./summary/assets/book%20cover.jpg)
