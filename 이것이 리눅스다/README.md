@@ -35,6 +35,15 @@
   - [06-01 IDE 및 SCSI 장치 개념, 하드디스크 1개 추가](./summary/Chapter06-01.md)
   - [06-02 하드디스크 관리-RAID 개념1(Linear, RAID0, RAID1)](./summary/Chapter06-02.md)
   - [06-03 하드디스크 관리-RAID 개념2(RAID5, RAID6, RAID 10)](./summary/Chapter06-03.md)
+  - [06-04 하드디스크 관리-RAID용 디스크 9개 장착](./summary/Chapter06-04.md)
+  - [06-05 하드디스크 관리-Linear RAID 구축](./summary/Chapter06-05.md)
+  - [06-06 하드디스크 관리-RAID 0, 1, 5 구축](./summary/Chapter06-06.md)
+  - [06-07 하드디스크 관리-Linear RAID, RAID 0, 1, 5 문제 발생과 조치방법](./summary/Chapter06-07.md)
+  - [06-08 하드디스크 관리-Linear RAID, RAID0, 1, 5 원상 복구](./summary/Chapter06-08.md)
+  - [06-09 하드디스크 관리-RAID 6, RAID0 10의 구축과 문제 발생](./summary/Chapter06-09.md)
+  - [06-10 하드디스크 관리-LVM 개념과 구현](./summary/Chapter06-10.md)
+  - [06-11 하드디스크 관리-CentOS를 RAID에 설치](./summary/Chapter06-11.md)
+  - [06-12 사용자별 공간할당-쿼터 개념과 실습](./summary/Chapter06-12.md)
 
 ## 책 정보
 
