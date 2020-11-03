@@ -163,7 +163,7 @@ RAID 1 + RAID 0 한 것으로 신뢰성과 성능이 동시에 뛰어남
 
 ### Linear RAID, RAID0, RAID1, RAID5 구현
 
-[실습2] 하드디스크 9개 준비
+### [실습2] 하드디스크 9개 준비
 
 실습 목표: 하드 9개를 장착하고, fdisk로 파티셔닝 한다.
 
@@ -194,13 +194,13 @@ RAID 1 + RAID 0 한 것으로 신뢰성과 성능이 동시에 뛰어남
 
 ### Linear RAID, RAID0, RAID1, RAID5 구현
 
-[실습3] Linear RAID 구축
+### [실습3] Linear RAID 구축
 
 실습 목표: Linear RAID 구축, mdadm 사용법을 익힌다.
 
-실습 흐름도
+실습 구성도
 
-![실습흐름도](./assets/06-05실습흐름도.png)
+![실습구성도](./assets/06-05실습구성도.png)
 
 1. Terminal 에서
    ```bash
@@ -209,8 +209,8 @@ RAID 1 + RAID 0 한 것으로 신뢰성과 성능이 동시에 뛰어남
    fdisk -l /dev/sdb  # sdb 정보 보기
    fdisk -l /dev/sdc  # sdc 정보 보기
    # 2. 논리 볼륨 만들기(껍데기 설정)
-   mdadm --create /dev/md9 --level=linear --raid-devices=2 /dev/sdb1 /devsdb2
-   # create at /dev/md9, linear by 2 devices(/dev/sdb1, /dev/sdb2)
+   mdadm --create /dev/md9 --level=linear --raid-devices=2 /dev/sdb1 /dev/sdc1
+   # create at /dev/md9, linear by 2 devices(/dev/sdb1, /dev/sdc1)
    mdadm --detail --scan  # 확인하기
    # 3. 논리 볼륨 만들기(파일 시스템 생성)
    mkfs.ext4 /dev/md9  # format 하기
@@ -224,4 +224,3 @@ RAID 1 + RAID 0 한 것으로 신뢰성과 성능이 동시에 뛰어남
         :wq
    mdadm --detail /dev/md9
    ```
-
