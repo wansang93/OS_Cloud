@@ -1,7 +1,7 @@
 # 이것이 리눅스다(CentOS 8)
 
 - 2020-09-19 ~ 2020-10-20 (Chapter05)
-- 2020-10-23 ~ (Chpater06)
+- 2020-10-23 ~ 2020-11-07 (Chpater06)
 
 강의 링크 -> [https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN](https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN)
 
@@ -44,6 +44,9 @@
   - [06-10 하드디스크 관리-LVM 개념과 구현](./summary/Chapter06-10.md)
   - [06-11 하드디스크 관리-CentOS를 RAID에 설치](./summary/Chapter06-11.md)
   - [06-12 사용자별 공간할당-쿼터 개념과 실습](./summary/Chapter06-12.md)
+- [Chapter 07 셸스크립트](./summary/Chapter07%20Summary.md)
+  - [07-01 셸스크립트-셸 스크립트 개요, 작성법, 실행법, 변수](./summary/Chapter07-01.md)
+  - [07-02 셸스크립트-다양한 프로그래밍 연습](./summary/Chapter07-02.md)
 
 ## 책 정보
 

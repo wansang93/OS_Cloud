@@ -34,7 +34,7 @@ Linear RAID 구축과 비슷함, 옵션만 변경하면 사실상 같음
 1. Terminal 에서
    ```bash
    mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sdf1 /dev/sdg1
-   y
+        y
    mkfs.ext4 /dev/md1
    mkdir /raid1
    mount /dev/md1 /raid1/
