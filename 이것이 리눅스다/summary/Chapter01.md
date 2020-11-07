@@ -34,18 +34,19 @@ VMware Workstaion Pro 15.0.0 다운로드 -> [http://download3.vmware.com/softwa
 
 ## 01-02 가상머신 4대 설치
 
-Server, Server_B, Client, Windows_Client 설치하기
+Server, Server_B, Client, Windows_Client 설치하기 기본
 
 1. 가상머신을 저장 할 폴더 4개를 만들기(SSD에 만드는 것을 추천)
 2. Player에 가서 Create a New Virtual Machine 클릭
-    1. ```I will install the operating system later```(OS 나중에 설치) 클릭
-    2. ```Linux``` -> Version 은 ```red hat enterprise linux 8``` 클릭
+    1. `I will install the operating system later`(OS 나중에 설치) 클릭
+    2. `Linux` -> Version 은 `red hat enterprise linux 8` 클릭
     3. 가상머신 이름은 원하는 대로, 폴더 경로는 아까 저장해 둔 폴더로 연결 후 다음
-    4. 원하는 저장공간만큼 사용 후 아래에 ```Store virtual disk as a single file``` 클릭
+    4. 원하는 저장공간만큼 사용 후 아래에 `Store virtual disk as a single file` 클릭
        - 한개 파일로 저장공간을 하면 보기에 편해서 이렇게 함, 안해도 크게 상관은 없음
-    5. 추가, 수정 할 경우 ```Customize Hardware``` 클릭 -> 수정 -> 끝내기
-3. 원하는 가상머신 클릭 후 ```Edit Virtual machine settings``` 클릭
-4. 필요 없는 기능 들 ```remove``` 필요한 기능 ```add``` 하고 OK
+       - Server 의 경우 디스크를 `SCSI`로 설정해 오류 발생 방지
+    5. 추가, 수정 할 경우 `Customize Hardware` 클릭 -> 수정 -> 끝내기
+3. 원하는 가상머신 클릭 후 `Edit Virtual machine settings` 클릭
+4. 필요 없는 기능 들 `remove` 필요한 기능 `add` 하고 OK
 
 ## 01-03 VMware 특징 및 네트워크 설정
 
@@ -60,6 +61,6 @@ VMware 특징
 
 네트워크 설정하기
 
-1. ```cmd``` -> ```ipconfig /all``` -> ```VMware Network Adapter VMnet8``` 의 ```IPv4```를 ```192.168.111.0```으로 바꾸는게 목적
-2. VMware Pro 들어가서 -> ```Edit``` -> ````Virtual Network Editor```` -> ```Change Settings``` 클릭
-3. VMnet8 클릭 -> Subnet IP 를 ```192.168.111.0```로 변경 -> ```OK``` 클릭
+1. `cmd` -> `ipconfig /all` -> `VMware Network Adapter VMnet8` 의 `IPv4`를 `192.168.111.0`으로 바꾸는게 목적
+2. VMware Pro 들어가서 -> `Edit` -> ``Virtual Network Editor`` -> `Change Settings` 클릭
+3. VMnet8 클릭 -> Subnet IP 를 `192.168.111.0`로 변경 -> `OK` 클릭
