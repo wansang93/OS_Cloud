@@ -1,7 +1,7 @@
 # 이것이 리눅스다(CentOS 8)
 
-- 2020-09-19 ~ 2020-10-20 (Chapter05)
-- 2020-10-23 ~ 2020-11-07 (Chpater06)
+- 2020-09-19 ~ 2020-10-20(32Days) Finish Chapter05
+- 2020-10-23 ~ 2020-11-08(17Days) Finish Chapter07
 
 강의 링크 -> [https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN](https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN)
 
