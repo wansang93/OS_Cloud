@@ -140,15 +140,29 @@
       - GNU/Linux: GNU 프로젝트를 통해 리눅스 커널 기반으로 어플 및 라이브러리를 추가, 리눅스 배포판 개발
 
 2. 리눅스의 일반적인 특징
-   1. 이식성
-   2. 무료 소프트웨어(Free Software)
+   1. 이식성 높음
+      - C언어로 작성, 플랫폼에 종속적인 부분만 어셈플리어로 작성 때문
+   2. 자유 소프트웨어(Free Software)
+      - GPL, LGPL 라이선스를 따름, contribution을 통해 진화
    3. 멀티 유저(Multi-User)
+      - 다수의 사용자가 한 시스템의 다양한 자원에 접근, 사용 가능
    4. 멀티프로그래밍(Multiprogramming)
-   5. 셸(Shell)
-   6. 보안(Security)
+      - 프로그램을 메모리에 적재, 동시 실행 가능
+   5. 계층적 파일시스템(Hierarchical File System)
+      - /(root) -> `/boot` `/home` `/dev` `/usr` `/var` `/sbin` `/etc/` `mnt` `/tmp` 구조
+   6. 셸(Shell)
+      - 명령어 해석, 프로그래밍, 환경 설정 기능 제공
+   7. 보안(Security)
+      - 유닉스 보안 모델을 이어 받은 임의접근제어 제공, 이를 향상한 확장 임의접근제어(Extended DAC)
+      - 임의접근제어(Discretionary Access Control): 주체마다 객체에 대한 접근 정책 설정
+      - 네트워크 정책에 따라 노드나 라우터로 동작 가능
+      - 네트워크 인터페이스에서 발생한 트레픽을 서버로 안전하게 전달 가능 (netfilter, iptables, ebtables, arptables 제공)
+      - 네트워크 스택은 IPSec 제공, IP 통신시 안전하게 데이터 송수신 가능
+      - SELinux(Security Enhanced Linux) 존재: 강제접근제어(Mandatory Access Control)를 강화
 
 3. 리눅스의 기술적 특징
    1. 모놀리딕 커널(monolithic kernel)
+      - 
    2. 장치의 파일화
    3. 다양한 파일시스템의 지원
    4. 가상메모리
@@ -156,7 +170,7 @@
    6. 동적 라이브러리와 정적 라이브러리
    7. 파이프
    8. 리다이렉션
-   9. 가상 콘솔
+   9.  가상 콘솔
 
 4. 리눅스의 장단점
    1. 리눅스의 장점
