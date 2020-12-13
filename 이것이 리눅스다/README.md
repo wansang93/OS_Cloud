@@ -2,6 +2,7 @@
 
 - 2020-09-19 ~ 2020-10-20(32Days) Finish Chapter05
 - 2020-10-23 ~ 2020-11-08(17Days) Finish Chapter07
+- 2020-12-14 ~ 
 
 강의 링크 -> [https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN](https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN)
 
@@ -47,6 +48,10 @@
 - [Chapter 07 셸스크립트](./summary/Chapter07%20Summary.md)
   - [07-01 셸스크립트-셸 스크립트 개요, 작성법, 실행법, 변수](./summary/Chapter07-01.md)
   - [07-02 셸스크립트-다양한 프로그래밍 연습](./summary/Chapter07-02.md)
+- [Chapter 08 원격지 시스템 관리](./summary/Chapter08%20Summary.md)
+  - [08-01 원격지 시스템 관리-텔넷 서버](./summary/Chapter08-01.md)
+  - [08-02 원격지 시스템 관리-SSH 서버](./summary/Chapter08-02.md)
+  - [08-03 원격지 시스템 관리-XRDP 서버](./summary/Chapter08-03.md)
 
 ## 책 정보
 
