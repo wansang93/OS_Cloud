@@ -52,6 +52,12 @@
   - [08-01 원격지 시스템 관리-텔넷 서버](./summary/Chapter08-01.md)
   - [08-02 원격지 시스템 관리-SSH 서버](./summary/Chapter08-02.md)
   - [08-03 원격지 시스템 관리-XRDP 서버](./summary/Chapter08-03.md)
+- [Chapter 09 네임 서버](./summary/Chapter09%20Summary.md)
+  - [09-01 네임 서버-네임서버 개념과 hosts 파일 역할](./summary/Chapter09-01.md)
+  - [09-02 네임 서버-IP획득과정, DNS개념, 캐싱전용네임서버 구축](./summary/Chapter09-02.md)
+  - [09-03 네임 서버-마스터네임서버 구축](./summary/Chapter09-03.md)
+  - [09-04 네임 서버-라운드로빈 네임서버](./summary/Chapter09-04.md)
+
 
 ## 책 정보
 
