@@ -27,15 +27,15 @@
 
 ```bash
 $ nslookup  # 특정 컴퓨터의 IP 주소를 확인하는 방법
-    > server  # 192.168.111.2 출력
-    > www.nate.com  # 120.50.132.112
-    > www.hanbit.co.kr  # 218.38.58.195
+> server  # 192.168.111.2 출력
+> www.nate.com  # 120.50.132.112
+> www.hanbit.co.kr  # 218.38.58.195
 
 $ cat /etc/resolv.conf  # 네임 서버 확인하기
 $ nano /etc/resolv.conf  # vi 상위호환 버전
-    # nameserver  # nameserver 주석 처리 후 Ctrl+x후 y로 저장, 엔터
+# nameserver  # nameserver 주석 처리 후 Ctrl+x후 y로 저장, 엔터
 
 $ nano /etc/hosts  # 연락처 열기
-    218.38.58.195  www.hanbit.co.kr  # 연락처에 추가
-    163.239.1.17  www.nate.com  # 서강대 IP를 네이트로 저장, 네이트 접속 시 서강대로 들어가짐
+218.38.58.195  www.hanbit.co.kr  # 연락처에 추가
+163.239.1.17  www.nate.com  # 서강대 IP를 네이트로 저장, 네이트 접속 시 서강대로 들어가짐
 ```

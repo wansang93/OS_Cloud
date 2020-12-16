@@ -34,12 +34,12 @@
     ```bash
     $ dnf -y install bind-chroot  # 네임 서버 관련 패키지 설치
     $ vi /etc/named.conf
-        :set nu  # 행번호 보기
-        11행(listen-on): 127.0.0.1; -> any;
-        12행(listen-on-v6): ::1; -> none;
-        19행(allow-query): localhost; -> any;
-        34행(dnssec-validation): yes; -> no;
-        :wq
+    :set nu  # 행번호 보기
+    11행(listen-on): 127.0.0.1; -> any;
+    12행(listen-on-v6): ::1; -> none;
+    19행(allow-query): localhost; -> any;
+    34행(dnssec-validation): yes; -> no;
+    :wq
     systemctl restart named  # 재시작
     systemctl enable named  # 활성화
     systemctl status named  # 작동 확인
@@ -50,35 +50,35 @@
     ``` bash
     $ dig @192.168.111.100 www.nate.com  # 서버 내부에서 테스트 하기
     $ nslookup
-        > server  # 192.168.111.2 로 설정되어 있음
-        > server 192.168.111.100  # 192.168.111.100 로 바꾸기
-        > www.nate.com
+    > server  # 192.168.111.2 로 설정되어 있음
+    > server 192.168.111.100  # 192.168.111.100 로 바꾸기
+    > www.nate.com
     ```
 
 2. 리눅스 클라이언트에서 DNS 주소 설정하기
 
     ```bash
     $ nslookup
-        > server
-        > exit
-    whoami
-    su -c 'gedit /etc/resolv.conf'
-        nameserver 192.168.111.100
+    > server
+    > exit
+    $ whoami
+    $ su -c 'gedit /etc/resolv.conf'
+    nameserver 192.168.111.100
     $ nslookup
-        > server  # 변경사항 확인    
+    > server  # 변경사항 확인    
     ```
 
 3. 서버B에서 DNS 주소 설정하기
 
     ``` bash
     $ vi /etc/resolv.conf
-        nameserver 192.168.111.100
+    nameserver 192.168.111.100
     $ nslookup
-        > server
-        > www.nate.com
+    > server
+    > www.nate.com
     $ dnf -y install elinks  # 텍스트로 웹브라우저 보기
     $ elinks
-        www.kernel.org  # 웹브라우저 사용 가능  
+    www.kernel.org  # 웹브라우저 사용 가능  
     ```
 
 4. 윈도우 클라이언트에서 DNS 주소 설정하기

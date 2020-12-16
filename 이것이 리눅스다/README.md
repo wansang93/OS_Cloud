@@ -2,7 +2,7 @@
 
 - 2020-09-19 ~ 2020-10-20(32Days) Finish Chapter05
 - 2020-10-23 ~ 2020-11-08(17Days) Finish Chapter07
-- 2020-12-14 ~ 
+- 2020-12-14 ~ 2020-12-16(05Days) Finish Chapter10
 
 강의 링크 -> [https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN](https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN)
 
@@ -57,7 +57,11 @@
   - [09-02 네임 서버-IP획득과정, DNS개념, 캐싱전용네임서버 구축](./summary/Chapter09-02.md)
   - [09-03 네임 서버-마스터네임서버 구축](./summary/Chapter09-03.md)
   - [09-04 네임 서버-라운드로빈 네임서버](./summary/Chapter09-04.md)
-
+- [Chapter 10 메일 서버](./summary/Chapter10%20Summary.md)
+  - [10-01 메일 서버-메일서버 개념과 네임서버 구축(1)](./summary/Chapter10-01.md)
+  - [10-02 메일 서버-메일서버 개념과 네임서버 구축(2)](./summary/Chapter10-02.md)
+  - [10-03 메일 서버-메일 서버 구축](./summary/Chapter10-03.md)
+  - [10-04 메일 서버-웹 메일 구축](./summary/Chapter10-04.md)
 
 ## 책 정보
 
