@@ -2,7 +2,7 @@
 
 - 2020-09-19 ~ 2020-10-20(32Days) Finish Chapter05
 - 2020-10-23 ~ 2020-11-08(17Days) Finish Chapter07
-- 2020-12-14 ~ 2020-12-16(05Days) Finish Chapter10
+- 2020-12-14 ~ 2020-12-17(06Days) Finish Chapter11
 
 강의 링크 -> [https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN](https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN)
 
@@ -62,6 +62,25 @@
   - [10-02 메일 서버-메일서버 개념과 네임서버 구축(2)](./summary/Chapter10-02.md)
   - [10-03 메일 서버-메일 서버 구축](./summary/Chapter10-03.md)
   - [10-04 메일 서버-웹 메일 구축](./summary/Chapter10-04.md)
+- [Chapter 11 데이터베이스 서버](./summary/Chapter11%20Summary.md)
+  - [11-01 데이터베이스 서버-DBMS 개념과 SQL문](./summary/Chapter11-01.md)
+  - [11-02 데이터베이스 서버-MariaDB 설치](./summary/Chapter11-02.md)
+  - [11-03 데이터베이스 서버-Windows에서 접속](./summary/Chapter11-03.md)
+  - [11-04 데이터베이스 서버-데이터베이스 생성과 운영](./summary/Chapter11-04.md)
+  - [11-05 데이터베이스 서버-Visual Studio와 MariaDB 연동](./summary/Chapter11-05.md)
+  - [11-06 데이터베이스 서버-Oralce 데이터베이스](./summary/Chapter11-06.md)
+- [Chapter 12 웹 서버](./summary/Chapter12%20Summary.md)
+  - [12-01 웹 서버-dnf로 APM 설치](./summary/Chapter12-01.md)
+  - [12-02 웹 서버-워드프레스 활용](./summary/Chapter12-02.md)
+  - [12-03 웹 서버-클라우드 서비스 활용](./summary/Chapter12-03.md)
+- [Chapter 13~19 요약](./summary/Chapter13%Summary.md)
+  - [Chapter 13 FTP 서버](./summary/Chapter13.md)
+  - [Chapter 14 NFS 서버](./summary/Chapter14.md)
+  - [Chapter 15 Samba 서버](./summary/Chapter15.md)
+  - [Chapter 16 DHCP 서버](./summary/Chapter16.md)
+  - [Chapter 17 프록시 서버](./summary/Chapter17.md)
+  - [Chapter 18 방화벽 서버](./summary/Chapter18.md)
+  - [Chapter 19 PXE 서버](./summary/Chapter19.md)
 
 ## 책 정보
 
