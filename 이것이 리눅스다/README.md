@@ -3,7 +3,7 @@
 - 2020-09-19 ~ 2020-10-20(32Days) Finish Chapter05
 - 2020-10-23 ~ 2020-11-08(17Days) Finish Chapter07
 - 2020-12-14 ~ 2020-12-17(06Days) Finish Chapter11
-- 2020-12-26 ~ (01Days) Finish Chapter12
+- 2020-12-26 ~ 2020-12-28(03Days) Finish Chapter19
 
 강의 링크 -> [https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN](https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN)
 
