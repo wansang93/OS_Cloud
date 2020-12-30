@@ -235,26 +235,26 @@
       - 0~65535 사이의 정수값
       - 0~1023 well known port로 시스템에서 사용하는 포트들
       - `/etc/services` 파일에서 주요 포트 번호 확인 가능
-      | 포트 | TCP | UDP | 설명                                                           |
-      | ---- | --- | --- | -------------------------------------------------------------- |
-      | 0    |     | UDP | 예약됨: 사용x                                                  |
-      | 13   | TCP | UDP | DAYTIME 프로토콜                                               |
-      | 20   | TCP |     | FTP 데이터 포트                                                |
-      | 21   | TCP |     | FTP 제어 포트                                                  |
-      | 22   | TCP |     | SSH(Secure Shell) 같은 프로토콜 및 포트 포워딩                 |
-      | 23   | TCP |     | 텔넷 프로토콜 - 암호화되지 않은 텍스트 통신                    |
-      | 25   | TCP |     | SMTP(Simple Mail Transfer Protocol - 이메일 전송에 사용        |
-      | 37   | TCP | UDP | TIME 프로토콜                                                  |
-      | 53   | TCP | UDP | DNS(Domain Name System)                                        |
-      | 67   |     | UDP | BOOTP(부트스트랩 프로토콜) 서버, DHCP로도 사용                 |
-      | 68   |     | UDP | BOOTP(부트스트랩 프로토콜) 클라이언트, DHCP로도 사용           |
-      | 80   | TCP | UDP | HTTP(HyperText Transfer Protocol) - 웹 페이지 전송             |
-      | 110  | TCP |     | POP(Post Office Protocol version 3) - 전자우편 가져오기에 사용 |
-      | 123  |     | UDP | NTP(Network Time Protocol) - 시간 동기화                       |
-      | 143  | TCP |     | IMAP4(인터넷 메시지 접근 프로토콜 4) - 이메일 가져오기에 사용  |
-      | 161  |     | UDP | SNMP(Simple Network Management Protocol) - Agent 포트          |
-      | 443  | TCP |     | HTTPS - SSL 위의 HTTP(암호화 전송)                             |
-      | 873  | TCP |     | rsync 파일 동기화 프로토콜                                     |
+         | 포트 | TCP | UDP | 설명                                                           |
+         | ---- | --- | --- | -------------------------------------------------------------- |
+         | 0    |     | UDP | 예약됨: 사용x                                                  |
+         | 13   | TCP | UDP | DAYTIME 프로토콜                                               |
+         | 20   | TCP |     | FTP 데이터 포트                                                |
+         | 21   | TCP |     | FTP 제어 포트                                                  |
+         | 22   | TCP |     | SSH(Secure Shell) 같은 프로토콜 및 포트 포워딩                 |
+         | 23   | TCP |     | 텔넷 프로토콜 - 암호화되지 않은 텍스트 통신                    |
+         | 25   | TCP |     | SMTP(Simple Mail Transfer Protocol - 이메일 전송에 사용        |
+         | 37   | TCP | UDP | TIME 프로토콜                                                  |
+         | 53   | TCP | UDP | DNS(Domain Name System)                                        |
+         | 67   |     | UDP | BOOTP(부트스트랩 프로토콜) 서버, DHCP로도 사용                 |
+         | 68   |     | UDP | BOOTP(부트스트랩 프로토콜) 클라이언트, DHCP로도 사용           |
+         | 80   | TCP | UDP | HTTP(HyperText Transfer Protocol) - 웹 페이지 전송             |
+         | 110  | TCP |     | POP(Post Office Protocol version 3) - 전자우편 가져오기에 사용 |
+         | 123  |     | UDP | NTP(Network Time Protocol) - 시간 동기화                       |
+         | 143  | TCP |     | IMAP4(인터넷 메시지 접근 프로토콜 4) - 이메일 가져오기에 사용  |
+         | 161  |     | UDP | SNMP(Simple Network Management Protocol) - Agent 포트          |
+         | 443  | TCP |     | HTTPS - SSL 위의 HTTP(암호화 전송)                             |
+         | 873  | TCP |     | rsync 파일 동기화 프로토콜                                     |
    5. 소켓
       - 네트워크 프로그램이 데이터 통신을 하기 위한 접점(endpoint)
       - 데이터 동신을 위해 소켓 생성, 상대방 소켓에 접속해 상호 간 데이터를 교환
