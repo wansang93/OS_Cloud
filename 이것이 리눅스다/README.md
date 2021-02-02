@@ -1,7 +1,7 @@
 # 이것이 리눅스다(CentOS 8)
 
 - 2020-09-19 ~ 2020-12-28(100Days) Chapter19
-- 2021-02-02 (Finish) Chapter18 Excersise
+- 2021-02-02 (Finish) Chapter18
 
 강의 링크 -> [https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN](https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN)
 
@@ -74,7 +74,7 @@
   - [12-01 웹 서버-dnf로 APM 설치](./summary/Chapter12-01.md)
   - [12-02 웹 서버-워드프레스 활용](./summary/Chapter12-02.md)
   - [12-03 웹 서버-클라우드 서비스 활용](./summary/Chapter12-03.md)
-- [Chapter 13~19 요약](./summary/Chapter13%Summary.md)
+- [Chapter 13~19 요약](./summary/Chapter13%20Summary.md)
   - [Chapter 13 FTP 서버](./summary/Chapter13.md)
   - [Chapter 14 NFS 서버](./summary/Chapter14.md)
   - [Chapter 15 Samba 서버](./summary/Chapter15.md)
