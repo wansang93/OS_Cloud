@@ -1,8 +1,11 @@
 # 이것이 리눅스다(CentOS 8)
 
-- 2020-09-19 ~ 2020-12-28(100Days) Finish Chapter19
+- 2020-09-19 ~ 2020-12-28(100Days) Chapter19
+- 2021-02-02 (Finish) Chapter18 Excersise
 
 강의 링크 -> [https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN](https://www.youtube.com/playlist?list=PLVsNizTWUw7EJ9z-LW3lv3VC-6HI9I3hN)
+
+카페 링크 -> [https://cafe.naver.com/thisislinux](https://cafe.naver.com/thisislinux)
 
 ## 강의록
 
