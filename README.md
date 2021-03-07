@@ -17,3 +17,7 @@
 ## [AWS_GURU](./AWS_GURU/README.md)
 
 AWS의 이론 및 실습을 동시에 익힐 수 있습니다.
+
+## [쿠버네티스 이론](./Kubernetes/README.md)
+
+쿠버네티스를 사용하고 이론을 익힙니다.
