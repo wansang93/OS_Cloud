@@ -1,13 +1,19 @@
 # AWS_GURU
 
-## Introduction to AWS
+learn.acloud.guru 에서 들은 기본 강의 입니다.
+
+# Introduction to AWS
+
+AWS의 기초 설명입니다.
+
+AWS의 물리적 구성과 서비스의 간단한 설명이 있습니다. 영문판과 한국어 번역을 만들어 봤습니다.
 
 - [Introduction to AWS](./Introduction%20to%20AWS.md)
 - [AWS 소개 한국어 번역](./Introduction%20to%20AWS_kr.md)
 
-learn.acloud.guru 에서 들은 기본 강의 입니다.
+# [AWS Certified Cloud Practitioner 2020](./AWS%20Certified%20Cloud%20Practitioner%202020/README.md)
 
-AWS의 물리적 구성과 서비스의 간단한 설명이 있습니다. 영문판과 한국어 번역을 만들어 봤습니다.
+AWS Certified Cloud **Practitioner** 2020 자격증 강의 입니다.
 
 # Hands On Lab
 
@@ -40,3 +46,7 @@ AWS의 물리적 구성과 서비스의 간단한 설명이 있습니다. 영문
 - Building a Microservice Application and DynamoDB Data Model
 - Creating an Amazon Aurora RDS Database (MySQL Compatible)
 - Deploying a Highly Available Web Application and a Bastion Host in AWS
+
+---
+
+- [Managing AWS IAM User Permissions Using Groups and Policies](./HandsOnLab/Managing%20AWS%20IAM%20User%20Permissions%20Using%20Groups%20and%20Policies.md)
