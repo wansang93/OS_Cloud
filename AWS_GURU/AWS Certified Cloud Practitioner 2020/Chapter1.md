@@ -1,4 +1,4 @@
-# Chapter1. 소개(Introduction)
+# Chapter 1. 소개(Introduction)
 
 ## 1-1. 클라우드 그루와 리눅스 아카데미 코스에 대해서
 

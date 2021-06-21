@@ -44,24 +44,6 @@
 - Migrations & Transfer, Network & Content Delivery
   - VPC, Route53
 
-### 2-1-tips. 클라우드 컴퓨팅이란?(What Is Cloud Computing?)
-
-- Know the 6 Advantages of Cloud
-  - Trade Capital Expense For Variable Expense
-  - Benefit from massive economies of scale
-  - Stop guessing about capacity
-  - Increase speed and agility
-  - Stop spending money running and maintaining data centers
-  - Go global in minutes
-- Know 3 different types of Cloud Computing
-  - Infrastructure As A Service(IAAS): EC2
-  - Platform As A Service(PAAS): Elatic Beanstalk, Lightsail
-  - Software As A Service(SAAS): Gmail
-- Know 3 types of Cloud Computing Deployments
-  - Public Cloud: AWS, Azure, GCP
-  - Hybrid: Mixture of public and private
-  - Private Cloud(Or on Premise): You manage it, in your datacenter. Openstack or Vmware
-
 ## 2-2. AWS와 세계 둘러보기(Around THe World With AWS)
 
 - AWS Products Link -> [https://aws.amazon.com/products/](https://aws.amazon.com/products/)
@@ -76,30 +58,11 @@
   - Edge Locations: AWS의 캐쉬정보가 있는 endpoint, 특히 클라우드프론트(CloudFront)나 아마존 CDN 등으로 구성된 것
   > 참고 블로그 [갓대희](https://goddaehee.tistory.com/178)
 
-### 2-2-tips. AWS와 세계 둘러보기(Around THe World With AWS)
-
-- Understanding the difference between a Region, an Availability Zones(AZ) and an Edge Location
-  - A Region is a physical location in the world which consists of two or more Availability Zones(AZ's).
-  - An AZ is one or more discrete data centers, each with redundant power, networking and connectivity, housed in separate facilities.
-  - Edge Locations are endpoints for AWS which are used for caching content. Typically this consists of CloudFront, Amazon's CDN.
-- Choosing the right AWS Region?
-  - Data Sovereignty Laws
-  - Latency to end users
-  - AWS Services
-
 ## 2-3. AWS 로그인 하기(Let's Log In To AWS)
 
 - Free Tier 가입하기 링크 -> [https://aws.amazon.com/free](https://aws.amazon.com/free)
 - [한도 알람 공지](https://aws.amazon.com/about-aws/whats-new/2017/12/aws-free-tier-usage-alerts-automatically-notify-you-when-you-are-forecasted-to-exceed-your-aws-service-usage-limits/)
 - 가입하려면 카드 정보를 입력해야 되서 일단 보류함
-
-### 2-3-tips. AWS 로그인 하기(Let's Log In To AWS)
-
-- Understand the difference support packages
-  - Basic: Free
-  - Developer: $29 a month(scales based on usage)
-  - Business: $100 a month(scales based on usage)
-  - Enterprise: $15,000 a month(scales based on usage)
 
 ## 2-4. Mac에서 세팅하기(Setting Up On A Mac)
 
@@ -144,36 +107,6 @@ IAM이란 여러분이 그룹이나 사용자, 규칙을 만들게 해줘요.
       1. IAM 개인 유저에서 그룹을 생성했어요.
    4. IAM 비밀번호 정책을 설정하세요.
 
-### 2-7-tips. [LAB: Cloud 시작하기! IAM(Identity Access Management)]
-
-- IAM
-  - IAM stands for **Identity Access Management**.
-  - It's **Global**, you do not specify a region when dealing with IAM.
-  - When you create a user or group, this is created GLOBALLY
-
-- You can access the AWS platform in 3 ways
-  - Via the Console
-  - Programatically(Using the Command Line)
-  - Using the Software Developers Kit(SDK)
-
-- root account
-  - Your root account is the email address you used to set up your AWS account.
-  - The root account always has full administrator access.
-  - You should not give these account credentials away to anyone.
-  - Instead create a user for each individual within your organization.
-  - You should always secure this root account using multi-factor authentication.
-
-- group
-  - A group is simply a place to store your users.  
-  - Your users will inherit all permissions that the group has.  
-  - Examples of groups might be developers, system administrators, human resources, finance etc.  
-
-- policies
-  - To set the permissions in a group you need to apply a policy to that group.
-  - Policies consist of JSON.
-  - These are referred to as key value pairs.
-  - You have your key, such as name and then the value eg.
-
 ## 2-8. IAM 모범 사례(IAM Best Practices)
 
 - Root Account
@@ -207,13 +140,6 @@ IAM이란 여러분이 그룹이나 사용자, 규칙을 만들게 해줘요.
   - 마지막 회전(rotated) 날짜
   - 마지막으로 사용된 서비스
 - MFA 활성화 여부
-
-### 2-9-tips. IAM 자격 증명 기록(IAM Credential Reports)
-
-- You can generate and download a **credential repor**t that lists all users in your account.
-  - Passwords
-  - Access Keys
-  - MFA
 
 ## 2-10. [LAB: Managing AWS IAM User Permissions Using Groups and Policies]
 
@@ -293,6 +219,8 @@ S3는 아마존의 guarantees를 따릅니다.
 7. S3 Outpost
    - 온프레미스 AWS Outposts 환경에 객체 스토리지를 제공
 
+![s3_comparison](./images/s3_comparison.png)
+
 ### 2-11-6. S3 요금(S3 - Charges)
 
 - 스토리지(Storage)
@@ -302,34 +230,6 @@ S3는 아마존의 guarantees를 따릅니다.
 - 전송 가속(Transfer Acceleration)
   - 클라우드프론트의 분산된 엣지 로케이션의 이점을 활용한 것!
 - 지역 간 복제(Cross Region Replication Pricing)
-
-### 2-11-tips. S3 101
-
-- S3
-  - S3 is **Object-based**: i.e. allows you to upload files.
-  - Files can be from 0 ~ 5 TB.
-  - There is unlimited storage.
-  - Files are stored in Buckets.
-  - S3 is a universal namespace. That is, names must be unique globally.
-  - Not suitable to install an operating system on.
-  - Successful uploads will generate a HTTP 200 status code.
-
-- The Key Fundamentals of S3 Are
-  - Key(This is simply the name of the object)
-  - Value(This is simply the data and is made up of a sequence of bytes)
-  - Read after Write consistency for PUTS of new Objects
-  - Eventual Consistency for overwrite PUTS and DELETES(can take some time to propagate)
-
-- 7 different storage classes
-  - S3 Standard 
-  - S3 IA
-  - S3 One Zone - IA
-  - S3 Intelligent Tiering
-  - S3 Glacier
-  - S3 Glacier Deep Archive
-  - S3 Outposts
-
-![s3_comparison](./images/s3_comparison.png)
 
 ## 2-12. [LAB: S3 버킷 만들기(Let's Create An S3 Bucket!)]
 
@@ -346,18 +246,6 @@ S3는 아마존의 guarantees를 따릅니다.
 5. 업로드 한 파일의 속성을 눌러주세요.
    1. 우리가 배운 다양한 설정을 할 수 있어요.
 
-### 2-12-tips. [LAB: S3 버킷 만들기(Let's Create An S3 Bucket!)]
-
-- Bucket
-  - Bucket names share **a common name space**. You can't have the same bucket name as someone else.
-  - When you view your buckets you biew them **globally** but you can have buckets in **individual regions**.
-  - You can replicate the contents of one bucket to another bucket automatically by using **cross region replication**.
-
-- Restricting Bucket Access
-  - Bucket Policies - Applies across the whole bucket
-  - Object Policies - Applies to individual files
-  - IAM Policies to Users & Groups - Applies to Users & Groups
-
 ## 2-13. [LAB: S3에서 WebSite 만들기(Let's Create A Website On S3)]
 
 1. AWS 콘솔에서 `S3`를 들어가면 지역은 `Global`로 변경되요.
@@ -367,30 +255,133 @@ S3는 아마존의 guarantees를 따릅니다.
 3. `index.html` 등의 웹 파일을 업로드 해주세요.
    1. 해당 파일을 클릭하고 `Actions`를 눌러서 퍼블릭으로 바꿔주세요.
 4. Bucket Policy를 수정을 누르세요.
-   1. 정책을 JSON 파일로 추가해주세요.
-   2. 정책의 Resource부분을 버킷 ARN으로 정해주세요.
+   1. 정책을 JSON 파일로 추가해주세요.(오픈소스 참고)
+   2. 정책의 Resource부분을 `버킷 ARN` 값으로 정해주세요.
 5. 버킷의 속성을 들어가세요.
    1. 가장 아래에 `Static website hosting`을 클릭해주세요.
-   2. index document를 index.html로 설정하세요.
-   3. error document를 error.html로 설정하세요.
-   4. 변경을 저장하면 새로운 도메인이 있어요.
-
-### 2-13-tips. [LAB: S3에서 WebSite 만들기(Let's Create A Website On S3)]
-
-- bucket
-  - You can use bucket polices to make entire S3 buckets public.
-  - You can use S3 to host STATIC websites(such as .html). Websites that require database connections such as Wordpress etc cannot be hosted on S3.
-  - S3 Scales automatically to meet your demand. Many enterprises will put static websites on S3 when they think there is going to be a large number of requests(such as for a movie preview for example).
+   2. `index document`를 `index.html`로 설정하세요.
+   3. `error document`를 `error.html`로 설정하세요.
+   4. 변경을 저장하면 새로운 도메인이 있어요. 접속해 보세요.
 
 ## 2-14. S3 버전 관리(S3 Versioning)
 
+1. 이전에 생성한 버킷에 들어가서 `속성`을 들어가세요.
+2. 제일 위에 `Bucket Versioning`의 수정을 클릭하세요.
+   1. Enable로 설정하세요.
+3. 수정한 `index.html`을 올리고 오브젝트에 들어가세요.
+   1. `List versions`를 클릭하면 버저닝을 볼 수 있어요.
+4. 수정한 `index.html`을 지우면 이전 버전으로 돌어가요.
+
 ## 2-15. CloudFront 탐험하기(Let's Explore CloudFront)
+
+A content delivery network(CDN)이란?
+- 분산형 서버 시스템으로 사용자 위치, 웹 페이지 출처와 문서 전달 서버를 기반으로 웹페이지와 웹 문서를 전달합니다.
+
+CloudFront의 핵심 전문 용어
+- Edge Location: 문서의 캐쉬된 장소, AWS의 지역과 AZ와 분리됨
+- Origin: CDN이 분산하는 모든 파일의 원조, S3 Bucket, EC2 인스턴스, 엘라스틱 로드벨런서나 라우터53가 될 수 있음
+- Distribution: CDN의 이름으로 Edge Location의 모음들로 구성되어 있음
+
+CloudFront의 2가지 타입
+- Web Distribution: 웹사이트 용
+- RTMP: 미디어 스트리밍
+
+실습
+1. AWS 콘솔에서 `CloudFront`를 들어가서 `CreateDistribution`을 클릭하세요.
+2. `Web`으로 시작을 눌러주세요.
+   1. 도메인 이름을 찾아 등록하고 버킷접속제한을 No로 설정해요.
+   2. 다 기본으로 설정(HTTPS만 접속, TTL 등)하고 등록을 해요.
+   3. 정말 오래 걸려요. Status가 Deploy로 바뀌면 도메인 `주소+파일이름`으로 들어가보세요.
 
 ## 2-16. EC2 101
 
-## 2-17. EC2 시작하기(Let's Use EC2)
+EC2 란?
+- 클라우드에 있는 가상 서버에요.
+- 새로운 서버를 만들 때 요구사항이나 부트하는데 시간을 절약해줘요.
+- 빠르게 확장, 축소가 가능해요.
+
+EC2 가격 모델
+1. 사용한 만큼(On Demand): 시간당 요금을 지불할 수 있어요.
+   - 선불이나 장기약정 없이 저렴하게 사용하고 싶은 사람들
+   - 단기의 갑작스럽거나 예측 불가한 워크로드가 있고, 중단되선 안되는 앱
+   - EC2에서 처음으로 개발, 시험 중인 앱
+2. 예약(Reserved): 용량을 예약하고, 시간당 요금을 할인해요.
+   - 꾸준한 사용이나 예측 가능한 앱
+   - 예약된 만큼의 용량이 필요한 앱
+   - 길게 계약하면 할인 혜택이 더해짐
+   - 예약 가격의 종류들
+     - 스탠다드(Standard): 75%까지 할인, 길게 계약하면 더 큰 할인
+     - 컨벌터플(Convertable): 54%까지 할인, 인스턴스 속성 변경 가능
+     - 셰쥴드(Scheduled): 특정 시간때만 사용할 때 유용해요
+3. 스팟(Spot): 시작과 종료 시간이 유연하면 원하는 가격으로 정할 수 있어요.
+   - 시작과 종료 시간이 자유로운 앱
+   - 컴퓨팅 가격이 매우 저렴해야만 수익이 나는 앱
+   - 대량의 서버 욜양 추가로 긴급히 컴퓨팅 파워가 필요한 사람 
+4. 전용 호스팅(Dedicated Hosts): 소프트웨어 라이선스를 저렴하게 사용할 수 있어요.
+   - 가상화 지원하지 않는 규제 요구사항에 유용
+   - 독립성이나 클라우드 배포를 지원하지 않는 라이센스에 적합
+   - 온디멘드 형태로 구매 가능(시간당)
+   - 예약 형태로 구매 가능, 온디멘드 가격보다 70% 까지 할인
+
+EC2 인스턴스 종류
+- 범용성
+  - T - 값 싼 목적(Cheap general purpose(think T2 Micro))
+  - M - 일반 앱 목적의 주 선택지(Main choice for general purpose apps)
+  - A - 암기반 워크로드(Arm-based workloads)
+- 컴퓨팅 최적화
+  - C - 컴퓨팅 최적화(For Compute)
+- 메모리 최적화
+  - R - For 램(RAM)
+  - X - 메모리 최적화(Extreme Memory)
+  - Z - 메모리와 CPU 최적화(Extreme Memory AND CPU)
+- 가속화 최적화
+  - P - 가속화 컴퓨팅, GPU용(Graphics, think Picture)
+  - G - 그래픽용(Graphics)
+  - F - For FPGA(Field Programmable Gate Array)
+- 스토리지 최적화
+  - I - For IOPS(Input/Output Operations Per Second)
+  - D - For 밀도(Density)
+  - H - 높은 디스크 처리량(High Disk Throughput)
+- U - 물리적 서버(Bare Metal)
+
+![EC2_Instance_Types](./images/EC2_Instance_Types.png)
+
+EBS란?
+- Elastic Block Store
+- EC2 인스턴스에 붙여 저장공간으로 활용 가능
+- EBS 볼륨은 자동으로 특정 AZ에 복제됨
+- EBS의 2가지 타입
+  - SSD
+    - General Purpose SSD(GP2): 가격과 성능이 균형잡힘
+    - Provisioned IOPS SSD(IO1): 고성능 SSD
+  - Magnetic
+    - Throughput Optimized HDD(ST1): 자주 엑세스하는 HDD
+    - Cold HDD(SC1): 적게 엑세스하는 SSD(File Servers)
+
+## 2-17. [LAB: EC2 시작하기(Let's Use EC2)]
+
+1. AWS 콘솔에서 `EC2`를 들어가고 지역을 선택해 주세요.
+2. `인스턴스 생성`을 눌러주세요.
+   1. Free Tier only를 클릭하면 무료로 사용할 수 있어요.
+   2. `인스턴스 타입`: `Amazon Linux 2 AMI`를 선택해 주세요.
+   3. `인스턴스 환경 구성`
+      1. `Purchasing option`: 요금 옵션을 선택하면 Spot instances로 설정 가능해요.
+      2. `Network`: 기본적으로 VPC로 통신을 하고 Subnet으로 AZ존을 선택할 수 있어요.
+   4. `Storage`를 선택해서 하드를 확장할 수 있어요.
+   5. `Tags`를 추가해서 정보를 추가해 수 있어요.
+   6. `SG(Security Group)`을 선택해서 쉽게 방화벽을 설정할 수 있어요.
+      1. SSH(22)를 Anywhere로 설정해서 어디서나 접속 가능하게 해요.
+      2. HTTP(80)을 열어 웹 서비스를 가능하게 해요.
+3. 키 페어를 설정해서 SSH 접속을 도와요.(for MAC User)
+   1. 키를 활성화를 하기 위해 `chmod 400 <keyname>.pem`를 입력해요.
+   2. `ssh ec2-user@<public IP> -i <keyname>.pem`으로 접속해요.
+   3. 접속 후 `yum update -y` 입력해 EC2 를 업그래이드 해줘요.
+4. 키 페어를 설정해서 SSH 접속을 도와요.(for Windows User)
+   1. `Putty`나 `MobaXterm`으로 접속해서 `SSH` 접속을 하면 돼요.
 
 ## 2-18. [LAB: Launching an EC2 instance in a Custom Virtual Private Cloud (VPC)]
+
+- [Launching an EC2 instance in a Custom Virtual Private Cloud (VPC)](../HandsOnLab/Launching%20an%20EC2%20instance%20in%20a%20Custom%20Virtual%20Private%20Cloud%20(VPC).md)
 
 ## 2-19. 명령어 사용하기(Using The Command Line)
 
