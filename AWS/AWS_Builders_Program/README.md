@@ -1,6 +1,6 @@
 # AWS Builders 프로그램 온라인 정기 세미나
 
-- 2021-06-21 ~
+- 2021-06-21 ~ 2021-06-23
 
 Link -> [https://aws.amazon.com/ko/events/seminars/aws-builders/](https://aws.amazon.com/ko/events/seminars/aws-builders/)
 
@@ -31,12 +31,17 @@ Cloud9 이란?
 - 브라우저만으로 코드를 작성, 실행 및 디버깅할 수 있는 클라우드 기반 통합 개발 환경(IDE)
 
 EKS란?
+-  EKS를 사용하면 쿠버네티스 마스터노드구성을 하지 않아도 AWS에서 관리해주기 때문에 되기 때문에 쉽고 빠르게 쿠버네티스를 이용할 수 있습니다.
 
 CloudWatch란?
+- AWS에서 동작하는 에플리케이션의 상태를 모니터링하는 도구입니다.
 
 Helm 이란?
+- 쿠버네티스 package managing tool 이다. node.js 의 npm 과 비슷한 형태로 쿠버네티스 패키지 배포를 가능하게 하는 tool 이라고 보면 됩니다.
 
 ArgoCD 란?
+- GitOps스타일의 배포를 지원하는 CD 도구입니다. 원하는 설정 사항을 변경하여 Git에 푸시하면, 자동으로 쿠버네티스 클러스터의 상태가 Git에 정의된 상태로 동기화 됩니다.
+
 
 ## 1. 환경 설정
 

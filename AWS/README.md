@@ -1,21 +1,28 @@
+# AWS
+
+# [AWS_Builders_Program](./AWS_Builders_Program/README.md)
+
+AWS 행사에 초청되어 들은 강의 입니다.
+
 # AWS_GURU
 
 learn.acloud.guru 에서 들은 기본 강의 입니다.
 
-# Introduction to AWS
+## Introduction to AWS
 
 AWS의 기초 설명입니다.
 
 AWS의 물리적 구성과 서비스의 간단한 설명이 있습니다. 영문판과 한국어 번역을 만들어 봤습니다.
 
-- [Introduction to AWS](./Introduction%20to%20AWS.md)
-- [AWS 소개 한국어 번역](./Introduction%20to%20AWS_kr.md)
+- [Introduction to AWS](./Introduction%20to%20AWS/Introduction%20to%20AWS.md)
+- [AWS 소개 한국어 번역](./Introduction%20to%20AWS/Introduction%20to%20AWS_kr.md)
+- [AWS 소개 리뉴얼](./Introduction%20to%20AWS/Introduction%20to%20AWS2.md)
 
-# [AWS Certified Cloud Practitioner 2020](./AWS%20Certified%20Cloud%20Practitioner%202020/README.md)
+## [AWS Certified Cloud Practitioner 2020](./AWS%20Certified%20Cloud%20Practitioner%202020/README.md)
 
 AWS Certified Cloud **Practitioner** 2020 자격증 강의 입니다.
 
-# Hands On Lab
+## Hands On Lab
 
 배운 랩들입니다.
 

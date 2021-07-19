@@ -16,7 +16,7 @@
 - Largest public cloud computing platform on the planet
   - AWS: 90%, MS: 5%, etc: 5% (on PPT in 2016)
   - AWS: 33%, MS: 18%, google: 9%, Alibaba, IBM, ...(Q2 2020)
-- More and more organisations are outsourcing their IT to AWS
+- More and more organizations are outsourcing their IT to AWS
 - The AWS certifications are the most popular IT certifications right now
 - Top Paid IT Certification for 2016 according to Forbes
 
@@ -28,7 +28,7 @@ Many Many~, 1000+ in 2016
 
 2 different types of partners
 
-1. Technology Partner: People who are provided technology that interact to AWS
+1. Technology Partner: People who are provided technology that interacts with AWS
    - Alert Logic
    - CloudBerry Lab
    - Sumo Logic
@@ -58,7 +58,7 @@ Many Many~, 1000+ in 2016
   - Certified Sysops Administrator Associate
 - Professional Tier
   - Certified Solutions Architect Professional
-  - Devops Professional
+  - DevOps Professional
 - Speciality
   - Security
   - Advanced Networking
@@ -91,19 +91,19 @@ Invention requires two things
 
 > Andy Jassy - CEO AWS
 
-**You can literally provision really complex environments**
+**You can provision complex environments**
 
 ## A Brief Time Line of AWS
 
 - 2003: Chris & Benjamin present a paper
 - 2004: SQS officially launched
 - 2006: AWS officially launched
-- 2007: over 180,000 devlopers on the platform
+- 2007: over 180,000 developers on the platform
 - 2010: all of amazon.com moved over
-- 2012: First re:Invent Confernce
+- 2012: First re: Invent Conference
 - 2013: Certifications Launched
-- 2014: Committed to achieve 100% renewable energy usage for its global footprint
-- 2015: AWS breaks out its revenue: $6 Billion USD per annum and growing close to 90% year on year
+- 2014: Committed to achieving 100% renewable energy usage for its global footprint
+- 2015: AWS breaks out its revenue: $6 Billion per annum and growing close to 90% year on year
 
 ## Gartner's Magic Quadrant
 
@@ -116,18 +116,18 @@ AWS was named as a leader in the IaaS Magic Quadrant for the 5th consecutive yea
 - **AWS Global Infrastructure**
   - It's the actual physical infrastructure of Amazon Web Services.
   - It's the physical stuff that AWS runs on.
-  - We really break it down into three different areas.
+  - We break it down into three different areas.
   - Regions, Availability Zones, and Edge Locations.
   - **Regions**
-    - Region is basically a place in the world where AWS resources exist.
+    - Region is a place in the world where AWS resources exist.
     - Region is a geographical area.
   - **Availability Zones**
     - Each region consists of two or more availability zones.
     - An availability zone is simply a data center.
-    - An availability zone could technically be a collection of data centers, but basically they're facilities that are very, very close to each other, and each availability zone is spaced away from another availability zone.
+    - An availability zone could technically be a collection of data centers, but they're facilities that are very, very close to each other, and each availability zone is spaced away from another availability zone.
   - **Edge Locations**
-    - An edge location is basically a content delivery network(CDN) endpoint for CloudFront.
-    - CDN 's a way to cache or to cache
+    - An edge location is a content delivery network(CDN) endpoint for CloudFront.
+    - CDN's a way to cache
     - What is CDN? (KOR) Link -> [https://goddaehee.tistory.com/173](https://goddaehee.tistory.com/173)
 
 - **Services**
@@ -139,33 +139,33 @@ AWS was named as a leader in the IaaS Magic Quadrant for the 5th consecutive yea
     - **Route 53**
       - Route 53 is Amazon's DNS service.
       - 53 is the DNS port.
-      - You can actually register domain names through Route 53.
+      - You can register domain names through Route 53.
     - **CloudFront**
       - CloudFront used to be in the storage section of AWS.
       - But they moved it over to networking and content delivery now.
       - For example
         ```
         We have Direct Connect as a way of connecting up your office or connecting up your physical data centers to AWS directly using a dedicated line, dedicated telephone line.
-        So instead of going over the internet, you're going over a dedicated line into AWS, and there's a few reasons you want to do that it might be around security but most of the time.
-        it's because you need a very reliable internet connection, because you're pushing a lot of data up to AWS and down from AWS, and then you would use Direct Connect.
+        So instead of going over the internet, you're going over a dedicated line into AWS, and there are a few reasons you want to do that it might be around security but most of the time.
+        it's because you need a very reliable internet connection. After all, you're pushing a lot of data up to AWS and down from AWS, and then you would use Direct Connect.
         ```
   - **Compute**
     - **EC2**
       - EC2 stands for Elastic Compute Cloud.
       - EC2 is simply the virtual machines that run on AWS.
     - **EC2 Container Service**
-      - EC2 Container Services is basically a highly scalable, high performance container management service that supports Docker containers.
-      - It basically allows you to run applications on a managed cluster of Amazon EC2 instances.
+      - EC2 Container Services is a highly scalable, high-performance container management service that supports Docker containers.
+      - It allows you to run applications on a managed cluster of Amazon EC2 instances.
     - **Elastic Beanstalk**
-      - If you don't know anything about AWS, and you want to deploy your code up into Amazon Web Services, you can actually just upload it to Elastic Beanstalk.
+      - If you don't know anything about AWS, and you want to deploy your code up into Amazon Web Services, you can just upload it to Elastic Beanstalk.
       - Elastic Beanstalk will then have a look at your code.
     - **Lambda**
       - Lambda is what we call serverless.
-      - So you don't actually go into the operating system, you don't do anything with the underlying host at all.
-      - It is basically one of the most revolutionary services of cloud computing.
-      - You'd be able to login using SSH or RDP, if it was windows. And you'd be able to install things on this.
+      - So you don't go into the operating system, you don't do anything with the underlying host at all.
+      - It is one of the most revolutionary services of cloud computing.
+      - You'd be able to log in using SSH or RDP if it was windows. And you'd be able to install things on this.
     - **Lightsail**
-      - It's basically out-of-the-box cloud.
+      - It's an out-of-the-box cloud.
       - So if you want a WordPress site or Joomla site, for example, Lightsail will deploy that for you automatically.
 
 # 6. 10,000 ft Overview 2: Storage, Databases, Migration & Analytics
@@ -176,11 +176,11 @@ AWS was named as a leader in the IaaS Magic Quadrant for the 5th consecutive yea
   - **Storage**
     - **S3**
       - S3 is almost as old as AWS itself.
-      - S3 is Simple Storage Service, S, S, S.
+      - S3 is a Simple Storage Service, S, S, S.
       - S3 is always for object-based storage.
       - Just think of it as a virtual disk in the cloud where you can store objects like ppt, pictures, movies or etcetera.
-      - What you don't use S3 for is things like, a place to install a database or a place to install an application may be a computer game. This is called object based storage. You'd need block-based storage.
-      - Dropbox actually stores all the metadata inside their own data centers. So, metadata is just basically data about data
+      - What you don't use S3 for is things like, a place to install a database or a place to install an application may be a computer game. This is called object-based storage. You'd need block-based storage.
+      - Dropbox stores all the metadata inside their own data centers. So, metadata is just data about data
     - **Glacier**
       - Glacier is a place in which you archive your files from S3 off
       - It's extremely, unbelievably low cost than S3.
@@ -189,22 +189,22 @@ AWS was named as a leader in the IaaS Magic Quadrant for the 5th consecutive yea
       - It's called Elastic File Service.
       - S3 is where you store objects, EFS is file-based storage and you can share it. 
     - **Storage Gateway**
-      - Storage Gateway is a way of connecting up S3 to your on-Premise data center or to your headquarters.
+      - Storage Gateway is a way of connecting up S3 to your on-Premise data center or your headquarters.
       - It can, is normally a virtual machine that you install on-Premise. So you get a virtual machine image and then it communicates with S3.
-      - EBS is Elastic Block Store and that's just basically a virtual disk that you attach to your EC2 instances.
+      - EBS is Elastic Block Store and that's just a virtual disk that you attach to your EC2 instances.
   - **Databases**
     - **RDS**
-      - RDS is relational database service.
+      - RDS is a relational database service.
       - We've got MySQL, we've got PostgreSQL, MariaDB, SQL Server, Oracle, and a new beta database technology
 called Aurora.
     - **DynamoDB**
-      - DynamoDB is basically a NoSQL database.
-      - It's really scalable, and it's got super high performance.
+      - DynamoDB is a NoSQL database.
+      - It's scalable, and it's got super high performance.
     - **RedShift**
       - Redshift is Amazon's data warehousing solution.
-      - You wanna basically transfer a copy of your production database over into Redshift. And then in Redshift you can run queries on that data.
+      - You wanna transfer a copy of your production database over into Redshift. And then in Redshift, you can run queries on that data.
     - **Elasticache**
-      - Elasticache basically is a way of caching your data in the cloud.
+      - Elasticache is a way of caching your data in the cloud.
       - It means that that data will be returned much quicker than if you're pulling it from your database.
   - **Migration**
     - **Snowball**
@@ -214,24 +214,24 @@ called Aurora.
       - AWS Database Migration Service (AWS DMS) is a cloud service that makes it easy to migrate relational databases, data warehouses, NoSQL databases, and other types of data stores.
     - **Server Migration Service(SMS)**
       - SMS stands for Server Migration Services.
-      - Basically This does exactly the same as database migration services, but instead of targeting databases, this targets virtual machines, specifically the VMware virtual machines.
+      - This does the same as database migration services, but instead of targeting databases, this targets virtual machines, specifically the VMware virtual machines.
   - **Analytics**
     - **Athena**
-      - Athena basically allows you to run SQL queries on S3.
-      - You can actually run SQL queries on CSV files or JSON files.
+      - Athena allows you to run SQL queries on S3.
+      - You can run SQL queries on CSV files or JSON files.
     - **EMR(Elastic MapReduce)**
       - Elastic MapReduce(EMR) is used for big data processing and used to process large amounts of data.
       - It's using a framework called Hadoop.
-      - There's other frameworks available including Apache spark, Apache HBase, Presto or Flunk.
+      - There are other frameworks available including Apache Spark, Apache HBase, Presto, or Flunk.
     - **Cloud Search**
-      - Cloud search is a fully managed service that's provided by AWS.
-      - If you need to create a search engine for your website or for your application, you know, you can use either cloud search or elastic search.
+      - Cloud Search is a fully managed service that's provided by AWS.
+      - If you need to create a search engine for your website or your application, you know, you can use either cloud search or elastic search.
       - We used to use cloud search ourselves, but then we moved over to Algolia.
-      - if you want to, you know, get off AWS and use a third party, I'd definitely recommend Algolia.
+      - if you want to, you know, get off AWS and use a third party, I'd recommend Algolia.
     - **Elastic Search**
-      - Elastic Search, it's a service that's using an open source framework, but essentially it allows you to create search capabilities within your website or application.
+      - Elastic Search, it's a service that's using an open-source framework, but essentially it allows you to create search capabilities within your website or application.
     - **Kinesis**
-      - Kinesis is a way of streaming and analyzing real time data, massive scale.
+      - Kinesis is a way of streaming and analyzing real-time data on, massive scale.
       - You can capture and store terabytes of data per hour.
       - you'd use this for things like financial transactions. You might be wanting to analyze the market or even things like social media streams.
     - **Data Pipeline**
@@ -251,84 +251,84 @@ called Aurora.
       - IAM is Identity Access Management.
       - This is the fundamental sort of identity and access management service to use AWS.
     - **Inspector**
-      - Inspector is an agent that you install on your virtual machines and it basically inspects those virtual machines and it does security reporting as to what's going on.
+      - Inspector is an agent that you install on your virtual machines and it inspects those virtual machines and it does security reporting as to what's going on.
     - **Certificate Manager**
       - This gives you free SSL certificates for your domain names.
-    - **Diretory Services**
-      - Directory Service is basically a way of using Active Directory, which you use with Microsoft, with AWS.
+    - **Directory Services**
+      - Directory Service is a way of using Active Directory, which you use with Microsoft, with AWS.
     - **WAF(Web Application Firewall)**
-      - WAF is Web Application Firewall.
-      - Basically this allows you to give application-level protection to your website.
+      - WAF is a Web Application Firewall.
+      - this allows you to give application-level protection to your website.
       - Traditionally firewalls will give you network protection, WAFs give you application-level protection.
-      - They stop things like SQL injections or cross-site scripting, or basically anyone doing anything dodgy at the application layer.
+      - They stop things like SQL injections or cross-site scripting, or anyone doing anything dodgy at the application layer.
     - **Artifacts**
       - AWS Artifact provides on-demand downloads of AWS security and compliance documents, such as AWS ISO certifications, Payment Card Industry (PCI), and Service Organization Control (SOC) reports.
   - **Management Tools**
     - **Cloud Watch**
-      - Cloud Watch is used to monitor performance of your, basically your AWS environment, in particular things like EC2.
+      - Cloud Watch is used to monitor the performance of your, your AWS environment, in particular things like EC2.
       - You can monitor disk utilization, RAM utilization, CPU utilization, etcetera.
     - **Cloud Formation**
-      - Cloud Formation is basically a document that describes your AWS environment.
+      - Cloud Formation is a document that describes your AWS environment.
       - Cloud Formation is a way of turning your infrastructure into code so instead of having physical firewalls, network switches, load balancers, physical servers, etcetera.
     - **Cloud Trail**
       - Cloud Trail is a way of auditing your AWS resources.
     - **Opsworks**
-      - OpsWorks is basically a way of automating deployments using Shift.
+      - OpsWorks is a way of automating deployments using Shift.
     - **Config**
-      - Config Manager is a way, basically it automatically monitors your environment and gives you warnings when your environment might break specific configurations that you set.
+      - Config Manager automatically monitors your environment and gives you warnings when your environment might break specific configurations that you set.
     - **Service Catalog**
-      - Service Catalog basically allows you as an enterprise to build out what it is that you authorize within your organization and what services are not authorized, and that's Service Catalog.
+      - Service Catalog allows you as an enterprise to build out what it is that you authorize within your organization and what services are not authorized, and that's Service Catalog.
     - **Trusted Advisor**
       - It's an automated way of scanning your environment and giving you different tips.
-      - Trusted Advisor was actually designed by the AWS solutions architecture team, and basically when they would go into customers environments, they would make a series of ecommendations.
+      - Trusted Advisor was designed by the AWS solutions architecture team, and, when they would go into customers environments, they would make a series of recommendations.
   - **Application Services**
     - **Step Functions**
-      - It's a way of visualizing what's going on inside your application or basically what different microservices it's using.
+      - It's a way of visualizing what's going on inside your application or what different microservices it's using.
     - **SWF((Simple Work Flow)**
       - Simple Work Flow service is actually what they use in the Amazon fulfillment center, and it's a way of coordinating both automated tasks and human-led tasks.
     - **API Gateway**
-      - Basically think of API Gateway as a door.
-      - It allows you to create, publish, maintain, and monitor and also secure APIs at scale.
+      - Think of API Gateway as a door.
+      - It allows you to create, publish, maintain, and monitor, and also secure APIs at scale.
     - **AppStream**
-      - It's a way of basically streaming desktop applications to your users.
+      - It's a way of streaming desktop applications to your users.
     - **Elastic Transcoder**
-      - Elastic Transcoder basically, you upload a video and it's going to transcode that video into all these different formats.
+      - Elastic Transcoder you upload a video and it's going to transcode that video into all these different formats.
   - **Developer Tools**
     - **Code Commit**
-      - It's a way of, it's a place to store your code securely in the cloud like kinds of GitHub.
+      - It's a way of, it's a place to store your code securely in the cloud-like kinds of GitHub.
     - **Code Build**
       - CodeBuild is a way of compiling your code.
       - It's just a way of compiling your code in different environments.
       - But you pay by the minute for CodeBuild.
     - **Code Deploy**
-      - It's a way of deploying you code to your EC2 instances.
+      - It's a way of deploying your code to your EC2 instances.
       - It does it in a very automated and regulated fashion.
     - **Code Pipeline**
-      - CodePipeline is a way of keeping track of all your different basically versions of codes.
+      - CodePipeline is a way of keeping track of all your different basic versions of codes.
   - **Mobile Services**
     - **Mobile Hub**
       - It lets you add, configure, and design features for your mobile apps.
       - This includes things like user authentication, data storage, backend logic, push notifications, content delivery, and analytics.
     - **Cognito**
-      - Cognito makes it easy for you to have users sign up and sign into your apps using things like social identity providers.
+      - Cognito makes it easy for you to have users sign up and sign in to your apps using things like social identity providers.
     - **Device Farm**
-      - Basically this enables you to improve the quality of your Android, iOS and Fire OS apps by quickly and securely testing them on hundreds of real smartphones.
+      - this enables you to improve the quality of your Android, iOS, and Fire OS apps by quickly and securely testing them on hundreds of real smartphones.
     - **Mobile Analytics**
-      - This is a service that lets you basically simply and cost-effectively collect and analyze app usage data so it's a way of analyzing your mobile data.
+      - This is a service that lets you simply and cost-effectively collect and analyze app usage data so it's a way of analyzing your mobile data.
     - **Pinpoint**
-      - You use Pinpoint to gather data on what your users are doing with the apps that you've built, where they are in world, how they do different purchases, etcetera.
+      - You use Pinpoint to gather data on what your users are doing with the apps that you've built, where they are in the world, how they do different purchases, etcetera.
   - **Business Productivity**
     - **WorkDocs**
-      - WorkDocs is a way of securely basically storing your important work documents in the cloud.
+      - WorkDocs is a way of securely storing your important work documents in the cloud.
     - **WorkMail**
       - Think of it as Exchange for AWS, So it's a way of sending and receiving email.
   - **IOT**
-    - It's basically a way of having thousands or millions or billions of devices out there and then keeping track of them.
-    - You use IoT gateway.
+    - It's a way of having thousands or millions or billions of devices out there and then keeping track of them.
+    - You use an IoT gateway.
   - **Desktop & Appstreaming**
     - **Workspaces**
       - WorkSpaces is just Virtual Desktop Infrastructure(VDI).
-    - **Appstream 2.0**
+    - **App stream 2.0**
       - It's just a way of streaming desktop applications to your users.
 
 # 8. 10,000 ft Overview 4: A.I., Messaging & Conclusion
@@ -339,10 +339,10 @@ called Aurora.
   - **A.I.**
     - **Alexa**
       - Alexa is Amazon's voice service in the cloud.
-      - You use it, basically, communicate to Alexa using an Echo, and essentially all you're doing is you're talking to Lambda.
+      - You use it communicate to Alexa using an Echo, and essentially all you're doing is you're talking to Lambda.
       - What drives that service is actually what's inside the Alexa service, and it's called Lex.
     - **Polly**
-      - Polly basically takes any text and turns it into voice.
+      - Polly takes any text and turns it into voice.
     - **Machine Learning**
       - **Rekognition**
         - You can upload a picture to it, and it will tell you what's in that picture.
@@ -350,10 +350,10 @@ called Aurora.
     - **SNS(Simple Notification Services)**
       - SNS is Simple Notification Services, this is a way of notifying you, either via email or via text message, for example.
     - **SQS(Simple Queue Service)**
-      - Basically, it's a queue system, so you can post jobs to a queue.
+      - it's a queue system, so you can post jobs to a queue.
       - SQS is a way of decoupling your applications.
     - **SES(Simple Email Service)**
-      - Simple Email Service is basically a way of sending and receiving emails using AWS.
+      - Simple Email Service is a way of sending and receiving emails using AWS.
 
 # 9. Keep Up to Date with AWS This Week
 
