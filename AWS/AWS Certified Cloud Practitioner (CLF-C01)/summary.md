@@ -833,12 +833,14 @@ Data at Rest: 사용중이지 않은 데이터
 
 **TCO(Total Cost of Ownership)**
 - **direct와 indirect AWS 비용을 이해시키는데 도움을 주는 금융 측정 서비스**임
+- TCO Calculator은 더이상 사용 불가능하지만 TCO개념은 시험에 나올 수 있음
 
 ### **Application Discovery Service**
 - AWS로 프로젝트 마이그래이션 계획을 도와줌
 - TCO 측정, 서버를 마이그래이션하는 다른 서비스와 함께 동작
 
 AWS를 사용하면서 TCO를 줄일 수 있는 방법
+- Multi-tenancy(여러 사용자가 같은 기능 사용)
 - capital expenditures 최소화
 - Utilize 예약 인스턴스
 - 리소스들의 올바른 규모 사용
@@ -879,7 +881,7 @@ AWS를 사용하면서 TCO를 줄일 수 있는 방법
 
 ### **Control Tower**
 - **여러분의 계정들을 회사의 규정에 맞게 정할 수 있음**
-- Multi-account strategy를 사용해서 새 계정 생을 도움
+- Multi-account strategy를 사용해서 새 계정 생성을 도움
 - Organization에 직접 동작 가능
 - 계정들에게 최상의 서비스 사용을 강제할 수 있음
 - 계정 관리를 위한 대시보드 제공
