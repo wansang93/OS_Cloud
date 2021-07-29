@@ -16,11 +16,10 @@ AWS의 기초 설명입니다. AWS의 물리적 구성과 서비스의 간단한
 
 ## AWS Certified Cloud Practitioner
 
-AWS Certified Cloud **Practitioner** 자격증 강의 입니다.
+AWS Certified Cloud **Practitioner** 자격증 강의 입니다. AWS의 전반적인 기능을 알 수 있어서 좋았습니다.
 
 - [AWS Certified Cloud Practitioner 2020](./AWS%20Certified%20Cloud%20Practitioner%202020/README.md)
 - [AWS Certified Cloud Practitioner (CLF-C01)](./AWS%20Certified%20Cloud%20Practitioner%20(CLF-C01)/README.md)
-
 
 ## Hands On Lab
 
@@ -104,4 +103,12 @@ AWS Certified Cloud **Practitioner** 자격증 강의 입니다.
 
 ## [AWS_Builders_Program](./AWS_Builders_Program/README.md)
 
-AWS 행사에 초청되어 들은 강의 입니다.
+AWS 행사에 초청되어 들은 강의 요약입니다. 초보였던 저에게 많은 것을 알려주었습니다.
+
+## [AWS Certified Solutions Architect Associate 2021](./AWS%20Certified%20Solutions%20Architect%20Associate%202021/README.md)
+
+Udemy의 SSA-C02 자격증을 위한 강의 요약입니다. 강사님이 정말 알아듣기 좋고 쉽게 설명해줘서 좋았습니다.
+
+## [Exam Readiness: AWS Certified Solutions Architect – Associate (Digital)](./AWS%20Certified%20Solutions%20Architect%20Associate%20(Digital)/README.md)
+
+There is free digital training only 2 hours on official AWS website, So I summarized Tips.
