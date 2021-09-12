@@ -1,8 +1,30 @@
 # AWS Builders 프로그램 온라인 정기 세미나
 
 - 2021-06-21 ~ 2021-06-23
+- 2021-08-03 ~ 2021-08-04
 
-Link -> [https://aws.amazon.com/ko/events/seminars/aws-builders/](https://aws.amazon.com/ko/events/seminars/aws-builders/)
+AWS Builders 프로그램 Link -> [https://aws.amazon.com/ko/events/seminars/aws-builders/](https://aws.amazon.com/ko/events/seminars/aws-builders/)
+
+# [210804] Networking 이론 및 실습
+
+# [210803] Security 이론 및 실습
+
+- AWS IAM Hands On Lab LAB [링크](https://whchoi98.gitbook.io/aws-iam/)
+- AWS 환경에서의 침해사고 대응 워크샵 LAB [링크](http://gslim-public-workshops.s3-website.ap-northeast-2.amazonaws.com/incidentresponseworkshop/)
+
+## LAB1-0. IAM 정책 소개
+
+정책 타입은 아래와 같이 6가지로 분류
+
+- 자격 증명 기반 (Identity-based policies)
+  - AWS 관리형 정책 - AWS에서 제공하는 글로벌 적용(AWS에서 많이 사용하는 것을 미리 만들어둔 정책 사용)
+  - AWS 고객 관리형 정책 - 고객의 계정에서 생성해서 사용관리.(우리가 정책을 만들어서 사용)
+  - AWS 인라인 정책 - 단일 사용자, 그룹, 역할(Role)에 직접 추가하는 방식.(개별적 정책을 정의해 1:1 대응)
+- 리소스 정책 기반 (Resource-based policies)
+- 권한 경계 기반 정책 (Permissions boundaries)
+- 조직 SCP 기반 정책 (Organizations SCPs)
+- 액세스 제어 리스트 (Access control lists -ACLs)
+- 세션 정책 (Session policies)
 
 # [210623] AWS Amplify와 AWS AppSync로 사진 공유 웹 어플리케이션 구현
 
@@ -31,13 +53,13 @@ Cloud9 이란?
 - 브라우저만으로 코드를 작성, 실행 및 디버깅할 수 있는 클라우드 기반 통합 개발 환경(IDE)
 
 EKS란?
--  EKS를 사용하면 쿠버네티스 마스터노드구성을 하지 않아도 AWS에서 관리해주기 때문에 되기 때문에 쉽고 빠르게 쿠버네티스를 이용할 수 있습니다.
+-  EKS를 사용하면 쿠버네티스 마스터 노드 구성을 하지 않아도 AWS에서 관리 해주기 때문에 쉽고 빠르게 쿠버네티스를 이용할 수 있습니다.
 
 CloudWatch란?
 - AWS에서 동작하는 에플리케이션의 상태를 모니터링하는 도구입니다.
 
 Helm 이란?
-- 쿠버네티스 package managing tool 이다. node.js 의 npm 과 비슷한 형태로 쿠버네티스 패키지 배포를 가능하게 하는 tool 이라고 보면 됩니다.
+- 쿠버네티스 package managing tool 입니다. node.js 의 npm 과 비슷한 형태로 쿠버네티스 패키지 배포를 가능하게 하는 tool 이라고 보면 됩니다.
 
 ArgoCD 란?
 - GitOps스타일의 배포를 지원하는 CD 도구입니다. 원하는 설정 사항을 변경하여 Git에 푸시하면, 자동으로 쿠버네티스 클러스터의 상태가 Git에 정의된 상태로 동기화 됩니다.
@@ -47,15 +69,22 @@ ArgoCD 란?
 
 ### 1-1. CloudFormation 스택을 생성 [링크](https://ap-northeast-2.console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=eks-devops&templateURL=https://jiwony-seoul-public.s3.ap-northeast-2.amazonaws.com/eks-c9.yaml)
 - 실습 환경(AWS Cloud9 환경: EC2 인스턴스로 구동)을 배포하려고
+
 ### 1-2. AWS Cloud9 인스턴스에 IAM Role을 부여
+
 - Instances에서 Actions -> Security -> Modify IAM role
 - 앞서 생성한 CloudFormation을 통해 배포된 IAM Role을 선택
+
 ### 1-3. Cloud9 콘솔로 이동, Open IDE 클릭
+
 ### 1-4. 2번에서 설정해준 IAM Role을 사용하기 위해 Cloud9의 임시 자격 증명 설정을 해제
+
 - 화면 우측 상단의 톱니바퀴를 클릭합니다.
 - 설정 창의 AWS Settings 메뉴를 클릭합니다.
 - AWS managed temporary credentials 를 클릭하여 캡쳐처럼 X 표시가 되도록 합니다.
+
 ### 1-5. 해당 파일을 잘 실행해준다.
+
 ```bash
 sh init/init.sh  # init.sh 파일 실행
 source ~/.bash_profile  # 수정값 적용하기
@@ -330,11 +359,9 @@ we can verify what we have running via the Helm list command:
 helm list
 ```
 
-
 ```bash
 helm uninstall mywebserver
 ```
-
 
 ```bash
 kubectl get pods -l app.kubernetes.io/name=nginx
@@ -355,14 +382,14 @@ Link -> [https://aws-builders-kr.workshop.aws/ko/10-intro.html](https://aws-buil
 
 웹 서버를 구축
 
-|AWS가 없다면?|AWS로 구현|
-|:---:|:---:|
-|서버 컴퓨터 구매|EC2|
-|OS(Windows Server, Linux)|AMI|
-|CPU, Memory, Storage|Instance, Storage|
-|네트워크 장비 구매|VPC|
-|방화벽 장비 구매|Security Group|
-|로드벨런서 장비 구매|Load Balancer|
+|       AWS가 없다면?       |    AWS로 구현     |
+| :-----------------------: | :---------------: |
+|     서버 컴퓨터 구매      |        EC2        |
+| OS(Windows Server, Linux) |        AMI        |
+|   CPU, Memory, Storage    | Instance, Storage |
+|    네트워크 장비 구매     |        VPC        |
+|     방화벽 장비 구매      |  Security Group   |
+|   로드벨런서 장비 구매    |   Load Balancer   |
 
 AWS 가입, 한글로 설정, Seoul Region으로 설정
 
