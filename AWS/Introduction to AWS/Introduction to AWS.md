@@ -4,13 +4,13 @@
 
 [Link](https://learn.acloud.guru/course/aws-technical-essentials/dashboard)
 
-# 1. An Important Note About A Cloud Guru and Linux Academy Courses
+## 1. An Important Note About A Cloud Guru and Linux Academy Courses
 
-# 2. Introduction
+## 2. Introduction
 
 [PDF Link](https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1597872657910-Lesson_01_Introduction_Introduction%20to%20AWS.pdf)
 
-## WHY Learn AWS?
+### WHY Learn AWS?
 
 - Fastest growing cloud computing platform on the planet
 - Largest public cloud computing platform on the planet
@@ -20,11 +20,11 @@
 - The AWS certifications are the most popular IT certifications right now
 - Top Paid IT Certification for 2016 according to Forbes
 
-## AWS New Service Announcement & Updates
+### AWS New Service Announcement & Updates
 
 Many Many~, 1000+ in 2016
 
-## The Partner Program
+### The Partner Program
 
 2 different types of partners
 
@@ -42,7 +42,7 @@ Many Many~, 1000+ in 2016
    - Booz Allen Hamilton
    - Datapipe
 
-## The AWS Partner Program
+### The AWS Partner Program
 
 | Partner  | Associate Certs | Professional Certs |
 | -------- | --------------- | ------------------ |
@@ -50,7 +50,7 @@ Many Many~, 1000+ in 2016
 | Advanced | 4               | 2                  |
 | Premier  | 20              | 8                  |
 
-## How The Exams Fit Together
+### How The Exams Fit Together
 
 - Associate Tier
   - Certified Solutions Architect Associate
@@ -64,14 +64,14 @@ Many Many~, 1000+ in 2016
   - Advanced Networking
   - Big Data
 
-## About A Cloud Guru
+### About A Cloud Guru
 
-- Check out our website https://acloud.guru
+- Check out our website <https://acloud.guru>
 - Founded in May 2015
 - Interactive Discussion Forums
 - Reach us directly via the site
 
-# 3. Keeping Up To Date - AWS This Week!
+## 3. Keeping Up To Date - AWS This Week
 
 AWS continuously innovate and update their services.
 
@@ -79,21 +79,22 @@ You can check what's happening below the link.
 
 [https://acloud.guru/aws-this-week](https://acloud.guru/aws-this-week)
 
-# 4. AWS History
+## 4. AWS History
 
 [PDF Link](https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1597864276000-Lesson_02_AWS_History_Introduction%20to%20AWS.pdf)
 
-## The Power of AWS
+### The Power of AWS
 
 Invention requires two things
+
 1. The ability to try a lot of experiments
 2. not having to live with the collateral damage of failed experiments
 
 > Andy Jassy - CEO AWS
 
-**You can provision complex environments**
+You can provision complex environments
 
-## A Brief Time Line of AWS
+### A Brief Time Line of AWS
 
 - 2003: Chris & Benjamin present a paper
 - 2004: SQS officially launched
@@ -105,11 +106,11 @@ Invention requires two things
 - 2014: Committed to achieving 100% renewable energy usage for its global footprint
 - 2015: AWS breaks out its revenue: $6 Billion per annum and growing close to 90% year on year
 
-## Gartner's Magic Quadrant
+### Gartner's Magic Quadrant
 
 AWS was named as a leader in the IaaS Magic Quadrant for the 5th consecutive year.
 
-# 5. 10,000 ft Overview 1: Networking & Compute
+## 5. 10,000 ft Overview 1: Networking & Compute
 
 [PDF Link](https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1597866222144-Lesson_03_Networking_and_Compute_Introduction%20to%20AWS.pdf)
 
@@ -144,11 +145,13 @@ AWS was named as a leader in the IaaS Magic Quadrant for the 5th consecutive yea
       - CloudFront used to be in the storage section of AWS.
       - But they moved it over to networking and content delivery now.
       - For example
-        ```
+
+        ```text
         We have Direct Connect as a way of connecting up your office or connecting up your physical data centers to AWS directly using a dedicated line, dedicated telephone line.
         So instead of going over the internet, you're going over a dedicated line into AWS, and there are a few reasons you want to do that it might be around security but most of the time.
         it's because you need a very reliable internet connection. After all, you're pushing a lot of data up to AWS and down from AWS, and then you would use Direct Connect.
         ```
+
   - **Compute**
     - **EC2**
       - EC2 stands for Elastic Compute Cloud.
@@ -168,7 +171,7 @@ AWS was named as a leader in the IaaS Magic Quadrant for the 5th consecutive yea
       - It's an out-of-the-box cloud.
       - So if you want a WordPress site or Joomla site, for example, Lightsail will deploy that for you automatically.
 
-# 6. 10,000 ft Overview 2: Storage, Databases, Migration & Analytics
+## 6. 10,000 ft Overview 2: Storage, Databases, Migration & Analytics
 
 [PDF Link](https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1597867082600-Lesson_04_Storage%2C%20Databases%2C%20Migration%20%26%20Analytics_Introduction%20to%20AWS.pdf)
 
@@ -187,7 +190,7 @@ AWS was named as a leader in the IaaS Magic Quadrant for the 5th consecutive yea
       - But You can't access them immediately.
     - **EFS(Elastic File Service)**
       - It's called Elastic File Service.
-      - S3 is where you store objects, EFS is file-based storage and you can share it. 
+      - S3 is where you store objects, EFS is file-based storage and you can share it.
     - **Storage Gateway**
       - Storage Gateway is a way of connecting up S3 to your on-Premise data center or your headquarters.
       - It can, is normally a virtual machine that you install on-Premise. So you get a virtual machine image and then it communicates with S3.
@@ -241,7 +244,7 @@ called Aurora.
       - It helps you create visualizations and rich sort of dashboards for your data that exist in AWS.
       - It can analyze data in S3, in DynamoDB, in RDS, in RedShift, etcetera.
 
-# 7. 10,000 ft Overview 3: Security, Management Tools, Application Services, Developer Tools, Mobile Services & IoT
+## 7. 10,000 ft Overview 3: Security, Management Tools, Application Services, Developer Tools, Mobile Services & IoT
 
 [PDF Link](https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1597868142858-Lesson_05_Security%2C%20Management%20Tools_Introduction%20to%20AWS.pdf)
 
@@ -331,7 +334,7 @@ called Aurora.
     - **App stream 2.0**
       - It's just a way of streaming desktop applications to your users.
 
-# 8. 10,000 ft Overview 4: A.I., Messaging & Conclusion
+## 8. 10,000 ft Overview 4: A.I., Messaging & Conclusion
 
 [PDF Link](https://acloud.guru/learn/aws-certified-solutions-architect-associate?_ga=2.50738218.287293286.1613436486-496063395.1613436486)
 
@@ -355,6 +358,6 @@ called Aurora.
     - **SES(Simple Email Service)**
       - Simple Email Service is a way of sending and receiving emails using AWS.
 
-# 9. Keep Up to Date with AWS This Week
+## 9. Keep Up to Date with AWS This Week
 
-# Finished 😊
+## Finished 😊

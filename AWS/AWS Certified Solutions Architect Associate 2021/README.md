@@ -2,19 +2,19 @@
 
 - 2021-07-27 ~
 
-# Slides
+## Slides
 
 - 교재 링크 -> [https://media.datacumulus.com/aws-saa/AWS%20Certified%20Solutions%20Architect%20Slides%20v4.2.pdf](https://media.datacumulus.com/aws-saa/AWS%20Certified%20Solutions%20Architect%20Slides%20v4.2.pdf)
   - 교재가 정말 잘 되 있음
 - 시험 관련 링크 -> [https://aws.amazon.com/certification/certification-prep/](https://aws.amazon.com/certification/certification-prep/)
 
-# Summary & Tips
+## Summary & Tips
 
 강의를 들으면서 꿀팁과 요약을 적어봅니다.
 
 ## Section 3: Getting started with AWS
 
-### Tips
+### Getting started with AWS Tips
 
 1. AWS에서 UI 개선 중임, 점차 개선 중이라 안바뀐 UI가 있음
 2. 왼쪽 위에 버튼 누르면 옛날 버전으로 바뀜
@@ -49,7 +49,7 @@
     - Access Keys: CLI, SDK를 사용해 AWS 접근
     - Audit: IAM Credential Reports & IAM Access Advisor
 
-### Tips
+### IAM & AWS CLI Tips
 
 1. 해당 서비스를 들어가서 지역을 보면 Global인지 아닌지 알 수 있음
 2. 계정@계정은 IAM 계정임을 알 수 있음
@@ -88,7 +88,7 @@
        - Your instance is moved around on different physical servers - whichever is not occupied by others at the time.
      - [Dedicated Host VS Dedicated Instance in stackoverflow](https://stackoverflow.com/questions/64309679/aws-dedicated-host-vs-dedicated-instance-why-the-first-is-more-expensive-than)
 2. Security Groups
-   
+
    ![photo/Untitled%202.png](photo/Untitled%202.png)
 
    - Security groups은 EC2의 방화벽 역활
@@ -100,7 +100,7 @@
    - 앱이 **연결 거부**면 **앱 오류나 실행x**
    - 기본 설정으로 **inbound 트래픽은 차단**, **outbound 트래픽은 허용**
 
-### Tips
+### EC2 Fundamentals Tips
 
 1. 루트 계정으로 `내 계정`들어가서 내리면 Billing을 공유할 수 있는 설정이 나옴, 거기서 체크해줘야 나중에 다른 유저가 볼 수 있음
 2. budget 설정 때 Email 하나당 threshold가 1개여야됨
@@ -121,7 +121,7 @@
 ### Tips
 
 1. 스팟 인스턴스는 EC2 종료(terminate)해도 다시 생김으로 Spot request를 삭제해야 함
-   
+
    ![photo/Untitled%203.png](photo/Untitled%203.png) ![photo/Untitled%204.png](photo/Untitled%204.png)
 
 ### Placement Groups
@@ -145,7 +145,7 @@
       - 장점: 여러 AZ에 분산 배포, 물리적 분리, 동시 실패 리스크 감소
       - 단점: placement group 당 AZ 당 최대 7개
       - 사용: 고가용성이 필요한 앱, 중요한 앱
-   4. 파티션(Partition)
+   3. 파티션(Partition)
 
       ![photo/Untitled%207.png](photo/Untitled%207.png)
 
@@ -155,6 +155,7 @@
       - 파티션 고장시 많은 많은 EC2 고장, 다른 파티션 영향은 x
       - EC2에서 메타데이터 같은 파티션 정보를 불러올 때
       - 사용: Hadoop, Cassandra, Kafka
+
 2. AWS 창에서 `Placement groups`를 클릭 -> 정책 생성 -> 그리고 Instance 생성시 `3.Configure Instance`의 `Placement group name` 설정
 
 ### ENI(Elastic Network Interfaces)
@@ -174,6 +175,7 @@
 ### EC2 Hibernate(EC2 절전모드)
 
 EC2의 여러가지 상태
+
 - Stop: EBS 데이터가 남아있음, 다음 시작때 작동
 - Terminate: EBS 다 날라감
 - Start
@@ -182,18 +184,18 @@ EC2의 여러가지 상태
   - 시작 후 app 시작, caches warmed up 등
 - Hibernate
 
-   ![photo/Untitled%209.png](photo/Untitled%209.png)
+  ![photo/Untitled%209.png](photo/Untitled%209.png)
 
-   - In-mermory(RAM) 상태가 보존!
-   - Instance boot 스피드가 훨씬 빠름(OS is not stooped, restarted)
-   - RAM 상태가 root EBS volume에 쓰여짐, 암호화
-   - C3, C4, C5, M3, M4, M5, R3, R4, R5 지원
-   - RAM size가 150GB 이하여야 됨
-   - bare metal 인스턴스 지원x
-   - AMI: Amazon Linux 2, Linux AMI, Ubuntu & Windows ...
-   - Root Volume: EBS여야 하고 크고 암호화됨, 인스턴스 스토어는 안됨
-   - On-Demand, Reserved Instances에서 사용 가능
-   - 60일 초과 절전모드는 불가
+  - In-mermory(RAM) 상태가 보존!
+  - Instance boot 스피드가 훨씬 빠름(OS is not stooped, restarted)
+  - RAM 상태가 root EBS volume에 쓰여짐, 암호화
+  - C3, C4, C5, M3, M4, M5, R3, R4, R5 지원
+  - RAM size가 150GB 이하여야 됨
+  - bare metal 인스턴스 지원x
+  - AMI: Amazon Linux 2, Linux AMI, Ubuntu & Windows ...
+  - Root Volume: EBS여야 하고 크고 암호화됨, 인스턴스 스토어는 안됨
+  - On-Demand, Reserved Instances에서 사용 가능
+  - 60일 초과 절전모드는 불가
 
 ### EC2 Nitro
 
@@ -230,11 +232,10 @@ EC2의 여러가지 상태
   - 지연성이 있을 수도 있음, EC2 instance에 빠르게 탈부착 가능
 - 특정 AZ에 바인딩 되어 있음
   - 다른 AZ에 부착 불가, 따라서 snapshot을 찍고 옮겨야 함
-- **오직 한개의 인스턴스에 하나만** 마운트 가능
+- **오직 한개의 인스턴스에 하나만** 마운트 가능(SAA 단계에서는)
   - 단 io1/io2 는 같은 AZ 내에서 멀티 마운트 가능
-  - 각 인스턴스는 
-    - Must use a file system that’s cluster-aware
-    - not XFS, EX4, etc…
+  - 각 인스턴스는 볼륨은 모든 읽기 쓰기 권한을 가짐
+  - Must use a file system that’s cluster-aware(not XFS, EX4, etc…)
 - 프로비저닝된 용량만큼 비용 청구, 용량을 늘릴 수 있음
 - EC2 instance가 terminate되면 EBS 동작을 제어함
   - 기본 세팅: root EBS 볼륨 삭제
@@ -250,6 +251,7 @@ EC2의 여러가지 상태
   - AZ 나 Region 간 shapshot 복사 가능
 
 EBS Volume
+
 - 타입
   - gp2 / gp3(SSD): General purpose(1GB ~ 16TB), low-latency
   - io1 / io2(SSD): Highest-performance(4GB ~ 64TB)
@@ -258,12 +260,12 @@ EBS Volume
 - SSD만 부트볼륨으로 사용 가능
 
 EBS Encryption
+
 - 암호화 EBS 볼륨을 만들면 다음을 따릅니다.
   - 볼륨의 유휴(at rest)데이터는 암호화됩니다.
   - 인스턴스와 볼륨간 이동중인 모든 데이터는 암호화됩니다.
   - 모든 스냅샷은 암호화됩니다.
   - 모든 볼륨은 스냅샷으로부터 만들어집니다.
-- 
 
 ### AMI(Amazon Machine Image)
 

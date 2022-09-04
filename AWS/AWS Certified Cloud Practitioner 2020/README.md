@@ -1,26 +1,26 @@
 # AWS Certified Cloud Practitioner 2020
 
-21-03-17 ~ 
+- 21-03-17 ~ (진행 중)
 
-# [Chapter 1. 소개(Introduction)](./Chapter1.md)
+## [Chapter 1. 소개(Introduction)](./Chapter1.md)
 
 기본적인 AWS Certified Cloud Practitioner 의 소개 영상입니다.
 
-# [Chapter 2. 클라우드 개념과 기술(Cloud Concepts and Technology)](./Chapter2.md)
+## [Chapter 2. 클라우드 개념과 기술(Cloud Concepts and Technology)](./Chapter2.md)
 
 클라우드 개념(26%)과 기술(33%)을 요약했습니다.
 
-# [Chapter 3. 가격과 책정(Billing & Pricing)](./Chapter3.md)
+## [Chapter 3. 가격과 책정(Billing & Pricing)](./Chapter3.md)
 
 가격과 책정(16%)을 요약했습니다.
 
-# [Chapter 4. 클라우드 보안(Security In The Cloud)](./Chapter4.md)
+## [Chapter 4. 클라우드 보안(Security In The Cloud)](./Chapter4.md)
 
 클라우드 보안(25%)을 요약했습니다.
 
-# 강의에서 나오는 팁(예상 문제)들
+## 강의에서 나오는 팁(예상 문제)들
 
-## 2-1. 클라우드 컴퓨팅이란?(What Is Cloud Computing?)
+### 2-1. 클라우드 컴퓨팅이란?(What Is Cloud Computing?)
 
 - Know the 6 Advantages of Cloud
   - Trade Capital Expense For Variable Expense
@@ -38,7 +38,7 @@
   - Hybrid: Mixture of public and private
   - Private Cloud(Or on Premise): You manage it, in your datacenter. Openstack or Vmware
 
-## 2-2. AWS와 세계 둘러보기(Around THe World With AWS)
+### 2-2. AWS와 세계 둘러보기(Around THe World With AWS)
 
 - Understanding the difference between a Region, an Availability Zones(AZ) and an Edge Location
   - A Region is a physical location in the world which consists of two or more Availability Zones(AZ's).
@@ -49,7 +49,7 @@
   - Latency to end users
   - AWS Services
 
-## 2-3. AWS 로그인 하기(Let's Log In To AWS)
+### 2-3. AWS 로그인 하기(Let's Log In To AWS)
 
 - Understand the difference support packages
   - Basic: Free
@@ -57,7 +57,7 @@
   - Business: $100 a month(scales based on usage)
   - Enterprise: $15,000 a month(scales based on usage)
 
-## 2-7. [LAB: Cloud 시작하기! IAM(Identity Access Management)]
+### 2-7. [LAB: Cloud 시작하기! IAM(Identity Access Management)]
 
 - IAM
   - IAM stands for **Identity Access Management**.
@@ -87,14 +87,14 @@
   - These are referred to as key value pairs.
   - You have your key, such as name and then the value eg.
 
-## 2-9. IAM 자격 증명 기록(IAM Credential Reports)
+### 2-9. IAM 자격 증명 기록(IAM Credential Reports)
 
 - You can generate and download a **credential repor**t that lists all users in your account.
   - Passwords
   - Access Keys
   - MFA
 
-## 2-11. S3 101
+### 2-11. S3 101
 
 - S3
   - S3 is **Object-based**: i.e. allows you to upload files.
@@ -112,7 +112,7 @@
   - Eventual Consistency for overwrite PUTS and DELETES(can take some time to propagate)
 
 - 7 different storage classes
-  - S3 Standard 
+  - S3 Standard
   - S3 IA
   - S3 One Zone - IA
   - S3 Intelligent Tiering
@@ -122,7 +122,7 @@
 
 ![s3_comparison](./images/s3_comparison.png)
 
-## 2-12. [LAB: S3 버킷 만들기(Let's Create An S3 Bucket!)]
+### 2-12. [LAB: S3 버킷 만들기(Let's Create An S3 Bucket!)]
 
 - Bucket
   - Bucket names share **a common name space**. You can't have the same bucket name as someone else.
@@ -134,14 +134,14 @@
   - Object Policies - Applies to individual files
   - IAM Policies to Users & Groups - Applies to Users & Groups
 
-## 2-13. [LAB: S3에서 WebSite 만들기(Let's Create A Website On S3)]
+### 2-13. [LAB: S3에서 WebSite 만들기(Let's Create A Website On S3)]
 
 - bucket
   - You can use bucket polices to make entire S3 buckets public.
   - You can use S3 to host STATIC websites(such as .html). Websites that require database connections such as Wordpress etc cannot be hosted on S3.
   - S3 Scales automatically to meet your demand. Many enterprises will put static websites on S3 when they think there is going to be a large number of requests(such as for a movie preview for example).
 
-## 2-14. S3 버전 관리(S3 Versioning)
+### 2-14. S3 버전 관리(S3 Versioning)
 
 - Using Versioning with S3
   1. Stores all versions of an object
@@ -153,7 +153,7 @@
   5. Versioning's MFA Delete capability
      - Uses multi-factor authentication; can be used to provide an additional layer of security
 
-## 2-15. CloudFront 탐험하기(Let's Explore CloudFront)
+### 2-15. CloudFront 탐험하기(Let's Explore CloudFront)
 
 - CloudFront
   - **Edge Location**: This is the location where content will be cached. This is separate to an AWS Region/AZ.
@@ -168,7 +168,7 @@
 - Objects are cached for the life of the TTL(Time To Live).
 - You can clear cached objects, but you will be charged.
 
-## 2-16. EC2 101
+### 2-16. EC2 101
 
 - EC2
   - Amazon Elastic Compute Cloud(EC2) is a web service that provides resizable compute capacity in the cloud.
@@ -206,7 +206,7 @@
     - **Throughput Optimized HDD**: Low cost HDD volume designed for frequently accessed, throughput-intensive workloads
     - **Cold HDD**: Lowest cost HDD volume designed for less frequently accessed workloads(File Servers)
 
-## 2-17. [LAB: EC2 시작하기(Let's Use EC2)]
+### 2-17. [LAB: EC2 시작하기(Let's Use EC2)]
 
 - EC2 is a compute based service. It is not serverless. It's a server!
 - Use a private key to connect to EC2
@@ -217,4 +217,3 @@
   - You need to open ports in orderto use virtual firewalls.
 - Always Design for failure.
 - Have one EC2 instance in each availability zone.
-

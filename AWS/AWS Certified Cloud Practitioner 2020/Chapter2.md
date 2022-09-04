@@ -129,6 +129,7 @@ IAM이란 여러분이 그룹이나 사용자, 규칙을 만들게 해줘요.
 ## 2-9. IAM 자격 증명 기록(IAM Credential Reports)
 
 자격 증명 기록으로 모든 유저 정보 리스트
+
 - 비밀번호
   - 비밀번호 활성화 여부
   - 마지막 사용 날짜
@@ -152,20 +153,23 @@ IAM이란 여러분이 그룹이나 사용자, 규칙을 만들게 해줘요.
 S3란?
 
 S3는 개발이나 IT팀에게 보안, 내구성, 확장성이 뛰어난 오브젝트 스토리지 입니다.
+
 - 파일을 안전하게 보관하는 장소입니다.
 - Object 기반 스토리지 입니다.
 - 데이터는 다양한 장소와 시설에 분리 보관합니다.
 
 S3의 기본적인 것들
+
 - S3는 Object 기반입니다. 여러분의 파일을 올릴 수 있습니다.
 - 파일은 0~5TB까지 가능합니다.
 - 무제한 스토리지 입니다.
 - 파일은 **Buckets**에 저장됩니다.
 - S3는 **universal namespace**입니다. 세계적으로 유일해야 합니다.
-  - ex) https://s3-eu-west-1.amazonaws.com/acloudguru
+  - ex) <https://s3-eu-west-1.amazonaws.com/acloudguru>
 - 성공적으로 업로드 하면 **HTTP 200 code**를 받습니다.
 
 Objects는 그냥 파일입니다. 구성요소들
+
 - Key - 파일 이름
 - Value - 내용물
 - Version ID - 버전관리의 중요한 것들
@@ -177,10 +181,12 @@ Objects는 그냥 파일입니다. 구성요소들
 ### 2-11-2. S3의 데이터 일관성 모델(Data Consistency Model For S3)
 
 S3는 어떻게 작동하나요?
+
 - Read after Write consistency for PUTS of new Objects
 - Eventual Consistency for overwrite PUTS and DELETES(can take some time to propagate)
 
 다른 말로 하면
+
 - 새 파일(objects)이 생성되고 즉시 읽으면 적절히 잘 읽습니다.
 - 파일을 수정하거나 삭제하고 그 파일을 즉시 읽으면 해당 내용이 변경되지 않고 읽어들일 수도 있습니다.(if you update an existing file or delete a file and read it immediately, you may get the older version, or you may not.)
 basically changes to objects can take a little bit of time to propagate.
@@ -188,6 +194,7 @@ basically changes to objects can take a little bit of time to propagate.
 ### 2-11-3. S3 - 보장성(S3 - Guarantees)
 
 S3는 아마존의 guarantees를 따릅니다.
+
 - s3 플랫폼의 99.99% 가용성을 위해 구축되요.
 - 99.9%의 가용성을 보장해요.
 - 99.999999999%의 내구성을 보장해요.
@@ -275,18 +282,22 @@ S3는 아마존의 guarantees를 따릅니다.
 ## 2-15. CloudFront 탐험하기(Let's Explore CloudFront)
 
 A content delivery network(CDN)이란?
+
 - 분산형 서버 시스템으로 사용자 위치, 웹 페이지 출처와 문서 전달 서버를 기반으로 웹페이지와 웹 문서를 전달합니다.
 
 CloudFront의 핵심 전문 용어
+
 - Edge Location: 문서의 캐쉬된 장소, AWS의 지역과 AZ와 분리됨
 - Origin: CDN이 분산하는 모든 파일의 원조, S3 Bucket, EC2 인스턴스, 엘라스틱 로드벨런서나 라우터53가 될 수 있음
 - Distribution: CDN의 이름으로 Edge Location의 모음들로 구성되어 있음
 
 CloudFront의 2가지 타입
+
 - Web Distribution: 웹사이트 용
 - RTMP: 미디어 스트리밍
 
 실습
+
 1. AWS 콘솔에서 `CloudFront`를 들어가서 `CreateDistribution`을 클릭하세요.
 2. `Web`으로 시작을 눌러주세요.
    1. 도메인 이름을 찾아 등록하고 버킷접속제한을 No로 설정해요.
@@ -296,11 +307,13 @@ CloudFront의 2가지 타입
 ## 2-16. EC2 101
 
 EC2 란?
+
 - 클라우드에 있는 가상 서버에요.
 - 새로운 서버를 만들 때 요구사항이나 부트하는데 시간을 절약해줘요.
 - 빠르게 확장, 축소가 가능해요.
 
 EC2 가격 모델
+
 1. 사용한 만큼(On Demand): 시간당 요금을 지불할 수 있어요.
    - 선불이나 장기약정 없이 저렴하게 사용하고 싶은 사람들
    - 단기의 갑작스럽거나 예측 불가한 워크로드가 있고, 중단되선 안되는 앱
@@ -316,7 +329,7 @@ EC2 가격 모델
 3. 스팟(Spot): 시작과 종료 시간이 유연하면 원하는 가격으로 정할 수 있어요.
    - 시작과 종료 시간이 자유로운 앱
    - 컴퓨팅 가격이 매우 저렴해야만 수익이 나는 앱
-   - 대량의 서버 욜양 추가로 긴급히 컴퓨팅 파워가 필요한 사람 
+   - 대량의 서버 욜양 추가로 긴급히 컴퓨팅 파워가 필요한 사람
 4. 전용 호스팅(Dedicated Hosts): 소프트웨어 라이선스를 저렴하게 사용할 수 있어요.
    - 가상화 지원하지 않는 규제 요구사항에 유용
    - 독립성이나 클라우드 배포를 지원하지 않는 라이센스에 적합
@@ -324,6 +337,7 @@ EC2 가격 모델
    - 예약 형태로 구매 가능, 온디멘드 가격보다 70% 까지 할인
 
 EC2 인스턴스 종류
+
 - 범용성
   - T - 값 싼 목적(Cheap general purpose(think T2 Micro))
   - M - 일반 앱 목적의 주 선택지(Main choice for general purpose apps)
@@ -347,6 +361,7 @@ EC2 인스턴스 종류
 ![EC2_Instance_Types](./images/EC2_Instance_Types.png)
 
 EBS란?
+
 - Elastic Block Store
 - EC2 인스턴스에 붙여 저장공간으로 활용 가능
 - EBS 볼륨은 자동으로 특정 AZ에 복제됨
@@ -427,6 +442,6 @@ EBS란?
 
 ## 2-40. Cloud Concepts & Technology Summary - Part 2
 
-## 2-41. AWS Certified Cloud Practitioner 2020 - Cloud Concepts And 
+## 2-41. AWS Certified Cloud Practitioner 2020
 
 ## 2-42. Technology Quiz

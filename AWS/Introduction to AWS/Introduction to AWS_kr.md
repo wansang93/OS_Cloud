@@ -4,13 +4,13 @@
 
 [링크](https://learn.acloud.guru/course/aws-technical-essentials/dashboard)
 
-# 1. Cloud Guru 및 Linux Academy 과정에 대한 중요 참고 사항
+## 1. Cloud Guru 및 Linux Academy 과정에 대한 중요 참고 사항
 
-# 2. 소개
+## 2. 소개
 
 [PDF 링크](https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1597872657910-Lesson_01_Introduction_Introduction%20to%20AWS.pdf)
 
-## 왜 AWS를 배워야 하나요?
+### 왜 AWS를 배워야 하나요?
 
 - AWS는 세상에서 제일 빠르게 성장하는 컴퓨팅 클라우드 플랫폼입니다.
 - 세상에서 가장 큰 퍼블릭 클라우드 컴퓨팅 플랫폼입니다.
@@ -21,11 +21,11 @@
 - 현재 AWS 자격증이 IT 자격증에서 가장 유명합니다.
 - 포브스 선정 2016년 가장많이 지불한 IT 자격증 1위입니다.
 
-## AWS의 새로운 서비스 발표와 업데이트
+### AWS의 새로운 서비스 발표와 업데이트
 
 정말 많아요, 2016년에는 1000 이상
 
-## 파트너 프로그램
+### 파트너 프로그램
 
 2가지 종류의 파트너 프로그램이 있어요.
 
@@ -43,7 +43,7 @@
    - Booz Allen Hamilton
    - Datapipe
 
-## AWS 파트너 프로그램
+### AWS 파트너 프로그램
 
 | 파트너   | 관련 자격증 | 전문 자격증 |
 | -------- | ----------- | ----------- |
@@ -51,7 +51,7 @@
 | 고급     | 4           | 2           |
 | 프리미어 | 20          | 8           |
 
-## 서로 잘맞는(Fit together) 시험은 어떻게 되는지
+### 서로 잘맞는(Fit together) 시험은 어떻게 되는지
 
 - 협력자 티어(Associate Tier)
   - 공인 솔루션 아키텍쳐(Certified Solutions Architect Associate)
@@ -65,15 +65,15 @@
   - 고급 네트워킹(Advanced Networking)
   - 빅데이터(Big Data)
 
-## 클라우드 그루란?
+### 클라우드 그루란?
 
-- Check out our website https://acloud.guru
-- 다음 웹사이트에서 확인하기 -> https://acloud.guru
+- Check out our website <https://acloud.guru>
+- 다음 웹사이트에서 확인하기 -> <https://acloud.guru>
 - 2015년 5월에 설립
 - 상호작용의 논의 포럼
 - 사이트를 통해 직접 연락
 
-# 3. 최신 정보를 알려줌 - 이번주의 AWS!
+## 3. 최신 정보를 알려줌 - 이번주의 AWS
 
 AWS는 지속적으로 발전하고 업데이트 됩니다.
 
@@ -81,13 +81,14 @@ AWS는 지속적으로 발전하고 업데이트 됩니다.
 
 [https://acloud.guru/aws-this-week](https://acloud.guru/aws-this-week)
 
-# 4. AWS 역사
+## 4. AWS 역사
 
 [PDF 링크](https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1597864276000-Lesson_02_AWS_History_Introduction%20to%20AWS.pdf)
 
-## AWS의 강점
+### AWS의 강점
 
 발명하려면 2가지가 필요해요.
+
 1. 많은 실험을 할수 있는 능력
 2. 실패한 실험들의 부수적인 피해를 감수할 필요가 없음
 
@@ -95,7 +96,7 @@ AWS는 지속적으로 발전하고 업데이트 됩니다.
 
 **정말 복잡한 환경에서도 손쉽게 대처가 가능합니다.**
 
-## AWS의 타임라인 요약
+### AWS의 타임라인 요약
 
 - 2003: 크리스 & 벤자민, 논문 발표
 - 2004: SQS 공식 출범
@@ -107,11 +108,11 @@ AWS는 지속적으로 발전하고 업데이트 됩니다.
 - 2014: 글로벌 풋프린트를 위해 100% 재생 에너지 사용 달성을 위해 노력
 - 2015: AWS 매출 창출: 연간 60억 달러, 전년 대비 90%에 육박
 
-## 가트너의 매직 쿼드런트(Gartner's Magic Quadrant)
+### 가트너의 매직 쿼드런트(Gartner's Magic Quadrant)
 
 AWS는 매직 쿼드런트의 IaaS 부분 5년 연속 1위로 이름을 올렸습니다.
 
-# 5. 10,000 ft 개요 1: 네트워킹 & 컴퓨팅
+## 5. 10,000 ft 개요 1: 네트워킹 & 컴퓨팅
 
 [PDF 링크](https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1597866222144-Lesson_03_Networking_and_Compute_Introduction%20to%20AWS.pdf)
 
@@ -145,7 +146,8 @@ AWS는 매직 쿼드런트의 IaaS 부분 5년 연속 1위로 이름을 올렸�
       - CloudFront는 AWS의 스토리지 섹션에 있었습니다.
       - 하지만 지금은 네트워킹 및 컨텐츠 제공으로 전환했습니다.
       - 예시
-        ```
+
+        ```text
         NAT은 전용 전화선을 사용하여 사무실을 연결하거나 물리적 데이터 센터를
         AWS에 직접 연결하는 방법으로 Direct Connect를 제공합니다.
         따라서 인터넷을 통해 이동하는 대신 AWS 전용 라인을 통해 연결합니다.
@@ -153,6 +155,7 @@ AWS는 매직 쿼드런트의 IaaS 부분 5년 연속 1위로 이름을 올렸�
         왜냐하면 매우 안정적인 인터넷 연결이 필요하기 때문입니다.
         AWS에서 AWS로 많은 데이터를 푸쉬하고 Direct Connect를 사용할 수 있기 때문입니다.
         ```
+
   - **컴퓨트(Compute)**
     - **EC2(EC2)**
       - EC2는 **엘라스틱 컴퓨트 클라우드**(Elastic Compute Cloud)의 줄임말입니다.
@@ -172,7 +175,7 @@ AWS는 매직 쿼드런트의 IaaS 부분 5년 연속 1위로 이름을 올렸�
       - 즉시 사용할 수 있는 클라우드입니다.
       - 예를 들어 WordPress 사이트나 Joomla 사이트를 원하면 라이트세일이 자동으로 배포합니다.
 
-# 6. 10,000 ft 개요 2: 저장소, 데이터배이스, 마이크래이션 & 분석
+## 6. 10,000 ft 개요 2: 저장소, 데이터배이스, 마이크래이션 & 분석
 
 [PDF 링크](https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1597867082600-Lesson_04_Storage%2C%20Databases%2C%20Migration%20%26%20Analytics_Introduction%20to%20AWS.pdf)
 
@@ -243,7 +246,7 @@ AWS는 매직 쿼드런트의 IaaS 부분 5년 연속 1위로 이름을 올렸�
       - 여러분을 AWS에 존재하는 데이터에 대한 다양한 종류의 대시보드를 만들 수 있습니다.
       - S3, DynamoDB, RDS, RedShift 등에서 데이터를 분석할 수 있습니다.
 
-# 7. 10,000 ft 개요 3: 보안, 관리 도구, 앱 서비스, 개발자 도구, 모바일 서비스 & 사물인터넷
+## 7. 10,000 ft 개요 3: 보안, 관리 도구, 앱 서비스, 개발자 도구, 모바일 서비스 & 사물인터넷
 
 [PDF 링크](https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1597868142858-Lesson_05_Security%2C%20Management%20Tools_Introduction%20to%20AWS.pdf)
 
@@ -333,7 +336,7 @@ AWS는 매직 쿼드런트의 IaaS 부분 5년 연속 1위로 이름을 올렸�
     - **앱스트리밍 2.0(Appstream 2.0)**
       - **데스크톱 프로그램을 사용자에게 스트리밍** 합니다.
 
-# 8. 10,000 ft 개요 4: 인공지능, 메시지 & 결론
+## 8. 10,000 ft 개요 4: 인공지능, 메시지 & 결론
 
 [PDF 링크](https://acloud.guru/learn/aws-certified-solutions-architect-associate?_ga=2.50738218.287293286.1613436486-496063395.1613436486)
 
@@ -357,9 +360,9 @@ AWS는 매직 쿼드런트의 IaaS 부분 5년 연속 1위로 이름을 올렸�
     - **SES(Simple Email Service)**
       - 간단한 이메일 서비스(Simple Email Service)는 **AWS를 사용해 이메일을 주고 받습**니다.
 
-# 9. AWS의 이주의 최신 정보 보기
+## 9. AWS의 이주의 최신 정보 보기
 
-# 끝 😊
+## 끝 😊
 
 번역하고 느낀 점은 영어에서 한글로 매끄럽게 번역이 어려웠습니다.
 

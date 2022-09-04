@@ -5,14 +5,14 @@
 
 AWS Builders 프로그램 Link -> [https://aws.amazon.com/ko/events/seminars/aws-builders/](https://aws.amazon.com/ko/events/seminars/aws-builders/)
 
-# [210804] Networking 이론 및 실습
+## [210804] Networking 이론 및 실습
 
-# [210803] Security 이론 및 실습
+## [210803] Security 이론 및 실습
 
 - AWS IAM Hands On Lab LAB [링크](https://whchoi98.gitbook.io/aws-iam/)
 - AWS 환경에서의 침해사고 대응 워크샵 LAB [링크](http://gslim-public-workshops.s3-website.ap-northeast-2.amazonaws.com/incidentresponseworkshop/)
 
-## LAB1-0. IAM 정책 소개
+### LAB1-0. IAM 정책 소개
 
 정책 타입은 아래와 같이 6가지로 분류
 
@@ -26,69 +26,77 @@ AWS Builders 프로그램 Link -> [https://aws.amazon.com/ko/events/seminars/aws
 - 액세스 제어 리스트 (Access control lists -ACLs)
 - 세션 정책 (Session policies)
 
-# [210623] AWS Amplify와 AWS AppSync로 사진 공유 웹 어플리케이션 구현
+## [210623] AWS Amplify와 AWS AppSync로 사진 공유 웹 어플리케이션 구현
 
 Link -> [https://awskrug.github.io/amplify-photo-gallery-workshop/20_getting_started.html](https://awskrug.github.io/amplify-photo-gallery-workshop/20_getting_started.html)
 
 일정 때문에 수업을 못 들음
 
-# [210622] Amazon EKS 기반 DevOps 환경 구축하기
+## [210622] Amazon EKS 기반 DevOps 환경 구축하기
 
 Link -> [https://main.dfdgsw33yvsy6.amplifyapp.com/ko/](https://main.dfdgsw33yvsy6.amplifyapp.com/ko/)
 
 목표: Amazon EKS를 기반으로 하여 DevOps 환경 구축에 필수적인 1) Observability 구성 2) GitOps 방식의 배포 방식 구성을 목표
 
-## 0. 용어 알아두기
+### 0. 용어 알아두기
 
 IaC 란?
+
 - Infrastructure as Code의 약자
 - AWS의 환경이나 OS등의 인프라를 구성할 때 코드 기반으로 작성하여 관리하거나 갱신하는 방식
 
 CloudFormation 이란?
+
 - Amazon Web Services(AWS) 리소스를 자동으로 생성해 주는 서비스임
 - 사용하려는 AWS 리소스를 템플릿 파일로 작성하면, CloudFormation이 이를 분석해서 AWS 리소스를 생성함
 - 이렇게 생성된 리소스를 스택이라고 함
 
 Cloud9 이란?
+
 - 브라우저만으로 코드를 작성, 실행 및 디버깅할 수 있는 클라우드 기반 통합 개발 환경(IDE)
 
 EKS란?
--  EKS를 사용하면 쿠버네티스 마스터 노드 구성을 하지 않아도 AWS에서 관리 해주기 때문에 쉽고 빠르게 쿠버네티스를 이용할 수 있습니다.
+
+- EKS를 사용하면 쿠버네티스 마스터 노드 구성을 하지 않아도 AWS에서 관리 해주기 때문에 쉽고 빠르게 쿠버네티스를 이용할 수 있습니다.
 
 CloudWatch란?
+
 - AWS에서 동작하는 에플리케이션의 상태를 모니터링하는 도구입니다.
 
 Helm 이란?
+
 - 쿠버네티스 package managing tool 입니다. node.js 의 npm 과 비슷한 형태로 쿠버네티스 패키지 배포를 가능하게 하는 tool 이라고 보면 됩니다.
 
 ArgoCD 란?
+
 - GitOps스타일의 배포를 지원하는 CD 도구입니다. 원하는 설정 사항을 변경하여 Git에 푸시하면, 자동으로 쿠버네티스 클러스터의 상태가 Git에 정의된 상태로 동기화 됩니다.
 
+### 1. 환경 설정
 
-## 1. 환경 설정
+#### 1-1. CloudFormation 스택을 생성 [링크](https://ap-northeast-2.console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=eks-devops&templateURL=https://jiwony-seoul-public.s3.ap-northeast-2.amazonaws.com/eks-c9.yaml)
 
-### 1-1. CloudFormation 스택을 생성 [링크](https://ap-northeast-2.console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=eks-devops&templateURL=https://jiwony-seoul-public.s3.ap-northeast-2.amazonaws.com/eks-c9.yaml)
 - 실습 환경(AWS Cloud9 환경: EC2 인스턴스로 구동)을 배포하려고
 
-### 1-2. AWS Cloud9 인스턴스에 IAM Role을 부여
+#### 1-2. AWS Cloud9 인스턴스에 IAM Role을 부여
 
 - Instances에서 Actions -> Security -> Modify IAM role
 - 앞서 생성한 CloudFormation을 통해 배포된 IAM Role을 선택
 
-### 1-3. Cloud9 콘솔로 이동, Open IDE 클릭
+#### 1-3. Cloud9 콘솔로 이동, Open IDE 클릭
 
-### 1-4. 2번에서 설정해준 IAM Role을 사용하기 위해 Cloud9의 임시 자격 증명 설정을 해제
+#### 1-4. 2번에서 설정해준 IAM Role을 사용하기 위해 Cloud9의 임시 자격 증명 설정을 해제
 
 - 화면 우측 상단의 톱니바퀴를 클릭합니다.
 - 설정 창의 AWS Settings 메뉴를 클릭합니다.
 - AWS managed temporary credentials 를 클릭하여 캡쳐처럼 X 표시가 되도록 합니다.
 
-### 1-5. 해당 파일을 잘 실행해준다.
+#### 1-5. 해당 파일을 잘 실행해준다
 
 ```bash
 sh init/init.sh  # init.sh 파일 실행
 source ~/.bash_profile  # 수정값 적용하기
 ```
+
 `init/init.sh`를 보면 아래와 같다.
 
 ```bash
@@ -176,11 +184,11 @@ echo 'eksctl version is' $(eksctl version)
 # eksctl version is 0.52.0
 ```
 
-## 2. Launch using eksctl
+### 2. Launch using eksctl
 
 목표: EKS Cluster that is ready to use!
 
-### 2-1. EKS cluster yaml 파일 만들기
+#### 2-1. EKS cluster yaml 파일 만들기
 
 ```bash
 cat << EOF > eksworkshop.yaml
@@ -212,7 +220,7 @@ secretsEncryption:
 EOF
 ```
 
-### 3-2. EKS cluster yaml 파일 실행
+#### 2-2. EKS cluster yaml 파일 실행
 
 ```bash
 eksctl create cluster -f eksworkshop.yaml
@@ -220,7 +228,7 @@ eksctl create cluster -f eksworkshop.yaml
 source ~/.bash_profile  # 수정값 적용하기
 ```
 
-### 3-3. TEST THE CLUSTER
+#### 2-3. TEST THE CLUSTER
 
 ```bash
 kubectl get nodes # if we see our 3 nodes, we know we have authenticated correctly
@@ -231,7 +239,7 @@ ROLE_NAME=$(aws cloudformation describe-stack-resources --stack-name $STACK_NAME
 echo "export ROLE_NAME=${ROLE_NAME}" | tee -a ~/.bash_profile
 ```
 
-## 3. Helm
+### 3. Helm
 
 - Helm is a **package manager** and application management tool for Kubernetes that packages multiple Kubernetes resources into a single logical deployment unit called a Chart.
   - Achieve a simple (one command) and repeatable deployment
@@ -240,14 +248,14 @@ echo "export ROLE_NAME=${ROLE_NAME}" | tee -a ~/.bash_profile
   - Execute post/pre deployment jobs during application deployment
   - Update/rollback and test application deployments
 
-- 헬름은 여러 쿠버네티스 자원들을 단일 논리적 배포 단위로 패키징하는 패키지 관리자임 
+- 헬름은 여러 쿠버네티스 자원들을 단일 논리적 배포 단위로 패키징하는 패키지 관리자임
   - 명령어 한번으로 단순하고 반복작인 배포 가능
   - 앱 종속성을 관리, 특별한 버전의 다른 앱이나 서비스를 사용함으로써
   - 여러 배포 구성을 관리: 테스트, 스테이징, 완성본 등
   - 배포 중에 배포 전/후 작업을 실행
   - 업데이트, 롤백, 테스트로 앱 배포
 
-### 3-1. INSTALL HELM CLI
+#### 3-1. INSTALL HELM CLI
 
 Verify the version
 
@@ -270,7 +278,7 @@ helm completion bash >> ~/.bash_completion
 source <(helm completion bash)
 ```
 
-### 3-2. DEPLOY NGINX WITH HELM
+#### 3-2. DEPLOY NGINX WITH HELM
 
 Helm uses a packaging format called **Charts**. A Chart is **a collection of files and templates** that describes Kubernetes resources.
 
@@ -313,7 +321,7 @@ helm search repo bitnami/nginx
 # That’s the one we’re looking for
 ```
 
-### 3-3. INSTALL BITNAMI/NGINX
+#### 3-3. INSTALL BITNAMI/NGINX
 
 How can you use Helm to deploy the bitnami/nginx chart?
 
@@ -351,7 +359,7 @@ To get the complete URL of this Service, run:
 kubectl get service mywebserver-nginx -o wide
 ```
 
-### 3-4. Uninstall / Delete / Clean Up
+#### 3-4. Uninstall / Delete / Clean Up
 
 we can verify what we have running via the Helm list command:
 
@@ -368,13 +376,13 @@ kubectl get pods -l app.kubernetes.io/name=nginx
 kubectl get service mywebserver-nginx -o wide
 ```
 
-## 4. EKS CLOUDWATCH CONTAINER INSIGHTS
+### 4. EKS CLOUDWATCH CONTAINER INSIGHTS
 
 Update later
 
 ---
 
-# [210621] AWS BUILDERS 100 HANDS ON LAB
+## [210621] AWS BUILDERS 100 HANDS ON LAB
 
 Link -> [https://aws-builders-kr.workshop.aws/ko/10-intro.html](https://aws-builders-kr.workshop.aws/ko/10-intro.html)
 
@@ -393,17 +401,19 @@ Link -> [https://aws-builders-kr.workshop.aws/ko/10-intro.html](https://aws-buil
 
 AWS 가입, 한글로 설정, Seoul Region으로 설정
 
-## 3. 네트워크 구성하기
+### 3. 네트워크 구성하기
 
 VPC(Virtual Private Cloud)란?
+
 - 사용자가 정의한 가상의 네트워크 공간 안에서 AWS 리소스를 시작
 - AWS의 확장 가능한 인프라를 사용한다는 이점과 함께 고객의 데이터 센터에서 운영하는 기존 네트워크와 매우 유사
 
-### 3-1. VPC 생성하기
+#### 3-1. VPC 생성하기
 
 **VPC 마법사 시작**을 하면 단일 퍼블릭 서브넷이 있는 VPC로 가능
 
 CIDR이란?
+
 - CIDR(Classless Inter-Domain Routing)로 네트워크의 주소와 크기를 표현하는 방식
 - 예를 들어 10.0.0.0/16 은 10.0.0.0 + /16 으로 구성
 - 네트워크 고정 범위 + 호스트 주소(가변 범위)
@@ -414,34 +424,38 @@ CIDR이란?
   - 3: AWS에서 나중에 사용하려고 예약
   - 255: 브로드캐스트 주소
 
-### 3-2. 추가 서브넷 생성하기
+#### 3-2. 추가 서브넷 생성하기
 
 서브넷을 하는 이유?
+
 - 고가용성을 확보하기 위해, 다중 가용 역역(AZ)에 서비스를 배포해야 함
 - 가용 영역 A 외의 C 영역에 서브넷을 생성
 
-### 3-3. 라우팅 테이블 편집하기
+#### 3-3. 라우팅 테이블 편집하기
 
 VPC 라우팅 테이블 개념
+
 - 서브넷 또는 게이트 웨이의 네트워크 트래픽이 전송되는 위치를 결정하는데 사용되는 라우팅이라는 규칙 집합이 포함
 - **기본 라우팅 테이블**은 VPC와 함께 자동으로 생성되는 라우팅 테이블
   - 명시적으로 연결되지 않은 모든 서브넷의 라우팅을 제어하는 역할
 - **사용자 지정 라우팅 테이블**은 기본 라우팅 테이블 외에 사용자가 생성한 라우팅 테이블
 
-### 3-4. 보안 그룹 생성하기
+#### 3-4. 보안 그룹 생성하기
 
 보안 그룹의 역할
+
 - 인스턴스에 대한 인바운드 및 아웃바운드 트래픽을 제어하는 가상 방화벽 역할
 
-## 4. 웹 서버 생성하기
+### 4. 웹 서버 생성하기
 
 EC2(Elastic Compute Cloud) 이해
+
 - 확장 가능한 컴퓨팅 용량
 - 하드웨어 선투자할 필요가 없어 더 빠르게 애플리케이션을 개발하고 배포
 - 원하는 만큼 가상 서버를 구축하고 보안 및 네트워크 구성과 스토리지 관리가 가능
 - 신속하게 규모를 확장하거나 축소할 수 있어 서버 트래픽 예측 필요성이 줄어듬
 
-### 4-1. 웹 서버 인스턴스 생성하기
+#### 4-1. 웹 서버 인스턴스 생성하기
 
 쉘 스크립트를 작성하여 인스턴스 생성과 동시에 쉘 스크립트 실행
 
@@ -459,18 +473,20 @@ fi
 yum -y update
 ```
 
-### 4-2. AMI 생성하기
+#### 4-2. AMI 생성하기
 
 Amazon Machine Image(AMI)란?
+
 - 동일한 구성의 인스턴스가 여러 개 필요할 때는 한 AMI를 사용하여 여러 인스턴스를 시작할 수 있음
 
-### 4-3. AMI 기반 인스턴스 생성하기
+#### 4-3. AMI 기반 인스턴스 생성하기
 
 AMI 기반 인스턴스 생성하면 편하게 Instance를 복붙 가능
 
-## 5. 로드밸런서 구성하기
+### 5. 로드밸런서 구성하기
 
 ELB(Elastic Load Balancing)란?
+
 - 애플리케이션 트래픽을 Amazon EC2 인스턴스, 컨테이너, IP 주소, Lambda 함수, 가상 어플라이언스와 같은 여러 대상에 자동으로 분산
 - 단일 가용 영역 또는 여러 가용 영역에서 다양한 애플리케이션 부하를 처리
 - Elastic Load Balancing이 제공하는 네 가지 로드 밸런서는 모두 애플리케이션의 내결함성에 필요한 고가용성, 자동 조정, 강력한 보안기능 제공
