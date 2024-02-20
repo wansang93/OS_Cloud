@@ -62,7 +62,6 @@
    |    6 | 프레젠테이션 |    ''     |                           ''                           | SMB, AFP, ASN.1                                    |
    |    7 |     응용     |    ''     |                           ''                           | HTTP, SMTP, POP3, IMAP, DNS, NFS, FTP, SSH, TELNET |
 
-
 ### 3-1-2. 네트워크 장비
 
 1. LAN 구성 장비
@@ -399,15 +398,16 @@
    4. 모든 네트워크 인터페이스의 설정 보기
       - `ifconfig -a`
    5. 특정 네트워크 인터페이스의 설정 보기
-      - `ifconfig eth0` 
+      - `ifconfig eth0`
    6. 특정 네트워크 인터페이스 활성화 및 비활성화 하기
       - `ifconfig eth0 up`
       - `ifconfig eth0 down`
    7. 네트워크 설정하기
-      ```bash
-      # 고정 IP 설정, 넷마스크 설정, 브로드캐스트 설정, 인터페이스 활성화
-      ifconfig wlan0 192.168.100.100 netmask 255.255.255.255 broadcast 192.168.100.253 up
-      ```
+
+         ```bash
+         # 고정 IP 설정, 넷마스크 설정, 브로드캐스트 설정, 인터페이스 활성화
+         ifconfig wlan0 192.168.100.100 netmask 255.255.255.255 broadcast 192.168.100.253 up
+         ```
 
 2. route
    1. 설명
@@ -582,14 +582,14 @@
 
 1. nslookup
    1. 설명
-      - 네임 서버의 정보 조회, IP를 통해 도메인명을 질의
+      - 네임 서버의 정보 조회, IP를 통해 도메인명을 질의, DNS 문제 진단 및 네트워크 구성확인
    2. 형식
       - `nslookup [option] hostname|address [dns]`
    3. 대화형으로 네임 서버 질의하기
       - 옵션없이 `nslookup`을 치면 `>`가 나타나 사용자 입력을 기다림 -> 원하는 도메인 주소 입력시 네임 서버의 정보 출력 -> `exit`로 종료
    4. 옵션으로 네임 서버 질의하기
-      - `nslookup www.google.com`: 
-      - `nslookup 8.8.8.8`: 
+      - `nslookup www.google.com`: dns 정보 조회하기
+      - `nslookup 8.8.8.8`: dns 정보 조회하기
    5. DNS 중 MX(Mail Record) 조회하기
       - `nslookup -type=mx google.com`: 메일 서버 설정에 대한 정보 조회
    6. CNAME과 NS 레코드 조회하기
@@ -604,7 +604,7 @@
    2. 형식
       - `dig [@nameserver] hostname|address [querytype]`
    3. dig을 통해 다양한 정보 조회하기
-      - `dig www.google.com`: www.google.com IP 주소 조회하기
+      - `dig www.google.com`: Google IP 주소 조회하기
       - `dig www.google.com MX`: 메일 서버 정보 조회하기
       - `dig -t ns www.google.com`: 네임 서버 정보 조회하기
       - `dig @8.8.8.8 www.google.com`: 지정한 네임 서버를 통해 질의하기
@@ -642,6 +642,7 @@
    1. 설명: telnet 프로토콜 기반 대화형 통신을 위한 텔넷 서버에 접속
    2. 형식: `telnet [options] address`
    3. 주요 예제
+
       ```bash
       telnet mysite.com  # mysite.com에 텔넷 접속
       telnet 192.168.100.80  # 192.168.100.80에 텔넷 접속
@@ -653,7 +654,8 @@
    1. 설명: 파일 전송을 위한 FTP 서버에 접속, 업로드 다운로드 가능
    2. 형식: `ftp hostname | address`
    3. 예제
+
       ```bash
-      $ ftp 192.168.100.77  # IP 주소로 ftp 서버에 접속
-      $ ftp ftp.my.com  # 호스트 이름을 통해 ftp 접속
+      ftp 192.168.100.77  # IP 주소로 ftp 서버에 접속
+      ftp ftp.my.com  # 호스트 이름을 통해 ftp 접속
       ```

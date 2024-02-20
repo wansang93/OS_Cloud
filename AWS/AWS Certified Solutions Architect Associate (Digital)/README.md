@@ -4,8 +4,6 @@
 
 강의 링크 -> [https://www.aws.training/Details/Curriculum?id=20685](https://www.aws.training/Details/Curriculum?id=20685)
 
-# Tips
-
 ## The Exam Overview
 
 ### AWS 시험
@@ -85,7 +83,7 @@
 3. 내결함성(Fault-tolerant)과 고가용성(High Availability)은 동일하지 않음
     1. 내결함성: 시스템의 일부 구성 요소가 작동하지 않더라도 계속 작동
     2. 고가용성: 시스템이 항상 작동하며 액세스 가능하며 가동 중지를 최소화하도록 보장
-4. 모든 것이 특정 시점에 실패한다고 예상하고 적적하게 설계 
+4. 모든 것이 특정 시점에 실패한다고 예상하고 적적하게 설계
 
 ### 2 Test Axioms
 
@@ -278,5 +276,3 @@ B. IA is cheaper for storage but more expensive for retrieval
 C. Glacier does not support public files
 
 D. EFS does not support public files
-
-

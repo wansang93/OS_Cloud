@@ -1,41 +1,25 @@
 # AWS
 
-## AWS 자격증
+## AWS Certified
 
-### Introduction to AWS
+### AWS-CLF(AWS Certified Cloud Practitioner - Foundational)
 
-AWS의 기초 설명입니다. AWS의 물리적 구성과 서비스의 간단한 설명이 있습니다.
+- [CloudGuru: Introduction to AWS](./Introduction%20to%20AWS/Introduction%20to%20AWS.md)
+- [CloudGuru: AWS 소개 한국어 번역](./Introduction%20to%20AWS/Introduction%20to%20AWS_kr.md)
+- [CloudGuru: AWS 소개 리뉴얼](./Introduction%20to%20AWS/Introduction%20to%20AWS2.md)
+- [CloudGuru: AWS Certified Cloud Practitioner 2020](./AWS%20Certified%20Cloud%20Practitioner%202020/README.md)
+- [CloudGuru: AWS Certified Cloud Practitioner (CLF-C01)](./AWS%20Certified%20Cloud%20Practitioner%20(CLF-C01)/README.md)
 
-영문판과 한국어 번역을 만들어 봤습니다. 또 리뉴얼 강의도 들었습니다.
+### AWS-SAA(AWS Certified Solutions Architect - Associate)
 
-- [Introduction to AWS](./Introduction%20to%20AWS/Introduction%20to%20AWS.md)
-- [AWS 소개 한국어 번역](./Introduction%20to%20AWS/Introduction%20to%20AWS_kr.md)
-- **[AWS 소개 리뉴얼](./Introduction%20to%20AWS/Introduction%20to%20AWS2.md)**
+- [Udemy: AWS Certified Solutions Architect Associate](./AWS%20Certified%20Solutions%20Architect%20Associate/README.md)
+- [AWS training: AWS Certified Solutions Architect Associate(Digital)](./AWS%20Certified%20Solutions%20Architect%20Associate%20(Digital)/README.md)
 
-### AWS Certified Cloud Practitioner
+## AWS Builder
 
-AWS Certified Cloud **Practitioner** 자격증 강의 입니다. AWS의 전반적인 기능을 알 수 있어서 좋았습니다.
+- [AWS_Builders_Program](./AWS_Builders_Program/README.md)
 
-- [AWS Certified Cloud Practitioner 2020](./AWS%20Certified%20Cloud%20Practitioner%202020/README.md)
-- **[AWS Certified Cloud Practitioner (CLF-C01)](./AWS%20Certified%20Cloud%20Practitioner%20(CLF-C01)/README.md)**
-
-### AWS SAA-C02
-
-- **[AWS Certified Solutions Architect Associate 2021](./AWS%20Certified%20Solutions%20Architect%20Associate%202021/README.md)**
-
-Udemy의 SSA-C02 자격증을 위한 강의 요약입니다. 강사님이 정말 알아듣기 좋고 쉽게 설명해줘서 좋았습니다.
-
-## 기타 강의
-
-### [Exam Readiness: AWS Certified Solutions Architect – Associate (Digital)](./AWS%20Certified%20Solutions%20Architect%20Associate%20(Digital)/README.md)
-
-There is free digital training only 2 hours on official AWS website, So I summarized Tips.
-
-### [AWS_Builders_Program](./AWS_Builders_Program/README.md)
-
-AWS 행사에 초청되어 들은 강의 요약입니다. 초보였던 저에게 많은 것을 알려주었습니다.
-
-### Hands On Lab
+## Hands On Lab
 
 <details>
 <summary>더 보기</summary>

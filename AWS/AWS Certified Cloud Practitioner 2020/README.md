@@ -1,6 +1,7 @@
 # AWS Certified Cloud Practitioner 2020
 
-- 21-03-17 ~ (진행 중)
+- 21-03-17 ~ (Finished)
+- [링크](https://learn.acloud.guru/course/aws-certified-cloud-practitioner/overview)
 
 ## [Chapter 1. 소개(Introduction)](./Chapter1.md)
 
