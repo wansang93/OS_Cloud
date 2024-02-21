@@ -11,6 +11,7 @@ Kia라는 소프트웨어 엔지니어가 기업가가 되려고 합니다.
 그녀는 그녀의 스타트업을 AWS에서 런칭하려고 합니다.
 
 우리는 다음 리스트들로 Kia를 도와주려고 합니다.
+
 - Grouping users
 - Assigning permissions using policies
 - Best practices
