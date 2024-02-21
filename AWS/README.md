@@ -1,5 +1,15 @@
 # AWS
 
+## Education
+
+### AI
+
+- [Practical Data Science with Amazon SageMaker](./Practical%20Data%20Science%20with%20Amazon%20SageMaker/)
+
+### Dev/Ops
+
+- [AWS_Builders_Program](./AWS_Builders_Program/README.md)
+
 ## AWS Certified
 
 ### AWS-CLF(AWS Certified Cloud Practitioner - Foundational)
@@ -14,10 +24,6 @@
 
 - [Udemy: AWS Certified Solutions Architect Associate](./AWS%20Certified%20Solutions%20Architect%20Associate/README.md)
 - [AWS training: AWS Certified Solutions Architect Associate(Digital)](./AWS%20Certified%20Solutions%20Architect%20Associate%20(Digital)/README.md)
-
-## AWS Builder
-
-- [AWS_Builders_Program](./AWS_Builders_Program/README.md)
 
 ## Hands On Lab
 
