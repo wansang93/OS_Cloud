@@ -2,9 +2,10 @@
 
 ## Education
 
-### AI
+### AI / Data
 
-- [Practical Data Science with Amazon SageMaker](./Practical%20Data%20Science%20with%20Amazon%20SageMaker/)
+- [Practical Data Science with Amazon SageMaker](./Education/Practical%20Data%20Science%20with%20Amazon%20SageMaker/)
+- [Building Data Analytics Solutions Using Amazon Redshift](./Education/Building%20Data%20Analytics%20Solutions%20Using%20Amazon%20Redshift/)
 
 ### Dev/Ops
 
@@ -75,7 +76,7 @@
 - Getting Started with CloudFormation
 - Using Tags and Resource Groups in AWS
 
-학원
+#### 학원
 
 - ~~Introduction to AWS Identity and Access Management (IAM)~~
 - ~~Launching an EC2 instance in a Custom Virtual Private Cloud (VPC)~~
