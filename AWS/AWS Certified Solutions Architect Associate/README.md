@@ -161,7 +161,7 @@ AWS Console에서 직접 실행하는 CLI
 - Roles: AWS 서비스나 EC2 인스턴스를 위한 것
 - Security: MFA + 비밀번호 정책
 - AWS CLI: CLI로 AWS 서비스 관리
-- AWS SDK: 프로그래밍 언어로 AWS  서비스 관리
+- AWS SDK: 프로그래밍 언어로 AWS 서비스 관리
 - Access Keys: CLI, SDK를 사용해 AWS 접근
 - Audit: IAM Credential Reports & IAM Access Advisor
 
@@ -183,26 +183,39 @@ AWS Console에서 직접 실행하는 CLI
   - IAM User 계정 들어가서 -> Bill & Cost Management Dashboard -> Charges by services -> EC2 -> 얼마 나왔는지 확인
 - Budgets 서비스 -> Create a budget -> budget 정책 설정 -> 메일 설정
 
-### EC2 Basic
+### EC2 Basics
 
 - EC2(Elastic Compute Cloud): Infrastructure as a Service
   - Virtual machines 렌탈(EC2)
   - 다양한 저장 장치(EBS)
   - 여러 시스템에 로드 분산(ELB)
-  - Auto Scaling group(ASG) 가능
-- EC2 sizing & configuration options
-  - EC2 Instance: AMI(OS) + Instance Size(CPU+RAM) + Storage(EBS, EFS, EC2 Instance Store)
-  - gNetwork Card, Firewall rules(Security Groups), Bootstrap script
-- EC2 구성 설정
-  - Security Groups: EC2 인스턴스에 부착된 방화벽
+  - Auto Scaling Group(ASG) 가능
+
+#### EC2 sizing & configuration options
+
+- EC2 Instance
+
+  - AMI(OS)
+  - Instance Size(CPU+RAM)
+  - Storage(EBS, EFS, EC2 Instance Store)
+  - gNetwork Card
+  - Security Groups(Firewall rules): EC2 인스턴스에 부착된 방화벽
   - EC2 User Data(Bootstrap script): 인스턴스에서 처음 시작하면 실행되는 스크립트
+
+- EC2 구성 설정
   - SSH: 터미널을 시작해 EC2 인스턴스 접속(Port 22)
   - EC2 Instance Role: IAM Role로 연결됨
-- 인스턴스 타입 읽는법: m5.2xlarge -> m은 **인스턴스 클래스**, 5는 **제너레이션**, 2xlarnge는 **인스턴스 클래스의 사이즈**
+
+### EC2 Instance Types Basics
+
+- 인스턴스 타입 읽는법 예시 m5.2xlarge
+  - m: **인스턴스 클래스**
+  - 5: **제너레이션**
+  - 2xlarnge: **인스턴스 클래스의 사이즈**
 - 인스턴스 클래스 타입들
-   1. Compute용: [C] 컴퓨트의 약자, 배치 프로세싱 워크로드, 게임 서버, 머신러닝, 하이 퍼포먼스 컴퓨터, 웹 서버, 동영상 파일 변환 등
-   2. In-Memory용: [R, X, Z] Ram의 약자, 높은 퍼포먼스, DB용, 웹 캐쉬용, 인메모리 DB, 리얼타임에 적합한 앱
-   3. Storage용: [I, D, H], OLTP(online transaction processing) 시스템(빈번한 호출), Redis같은 캐쉬 인메모리 DB, 유, Data 웨어하우스 앱, 분산 파일 시스템
+  1.  Compute용: [C] 컴퓨트의 약자, 배치 프로세싱 워크로드, 게임 서버, 머신러닝, 하이 퍼포먼스 컴퓨터, 웹 서버, 동영상 파일 변환 등
+  2.  In-Memory용: [R, X, Z] Ram의 약자, 높은 퍼포먼스, DB용, 웹 캐쉬용, 인메모리 DB, 리얼타임에 적합한 앱
+  3.  Storage용: [I, D, H], OLTP(online transaction processing) 시스템(빈번한 호출), Redis같은 캐쉬 인메모리 DB, 유, Data 웨어하우스 앱, 분산 파일 시스템
 
 ### Security Groups & Classic Ports Overview
 
@@ -242,10 +255,10 @@ AWS Console에서 직접 실행하는 CLI
   - Windows는 기본적으로 Putty Lecture
 - SSH 포트로 원격에 컴퓨터 접속해 CLI 사용 가능
 - windows10이상에서 ssh 접속이 가능함, `ssh -i <key_location> <ec2-user>@<ip-address>`로 접속(권한 오류발생)
-   1. 이러면 권한 설정 때문에 `chmod` 처럼 권한을 바꿔야 함
-   2. `.pem` 파일에서 오른쪽버튼 `속성` -> `보안` -> `고급` -> `소유자 변경` -> `해당 유저`로 변경
-   3. 해당 유저만 권한을 남기고 저장
-   4. `Full control`인지 확인하고 다시 위에 명령어 실행
+  1.  이러면 권한 설정 때문에 `chmod` 처럼 권한을 바꿔야 함
+  2.  `.pem` 파일에서 오른쪽버튼 `속성` -> `보안` -> `고급` -> `소유자 변경` -> `해당 유저`로 변경
+  3.  해당 유저만 권한을 남기고 저장
+  4.  `Full control`인지 확인하고 다시 위에 명령어 실행
 - Troubleshooting
   - connection timeout: Inbound에서 SSH 있는지 확인, 개인 방화벽 확인
   - Windows에서 SSH 접속 불량: 위 방법, 모르면 구글링
@@ -262,7 +275,7 @@ AWS Console에서 직접 실행하는 CLI
   - IAM role에서 role 생성
   - EC2 Instance -> 인스턴스 선택 -> Connect -> Security -> Modify IAM role -> role 연결
 
-### EC2 Instance Purchasing Options, Spot Instances & Spot Fleet
+### EC2 Instance Purchasing Options
 
 구매 옵션들을 호텔에 비유
 
@@ -304,7 +317,7 @@ AWS Console에서 직접 실행하는 CLI
   - Your instance is moved around on different physical servers - whichever is not occupied by others at the time.
 - [Dedicated Host VS Dedicated Instance](https://aws.amazon.com/ec2/dedicated-hosts/#:~:text=An%20important%20difference%20between%20a,same%20physical%20server%20over%20time.)
 
-#### Spot Instances & Spot Fleet
+### Spot Instances & Spot Fleet
 
 Spot Instances
 
@@ -316,7 +329,7 @@ Spot Instances
 
 ![photo/Untitled%203.png](photo/Untitled%203.png) ![photo/Untitled%204.png](photo/Untitled%204.png)
 
-Spot Fleets
+#### Spot Fleets
 
 - Set of Spot Instances + (optional) Op-Demand Instances
 - 자동으로 Spot 인스턴스를 최저가에 적용
@@ -338,9 +351,12 @@ Spot Fleets
 
 ### Placement Groups
 
+EC2 인스턴스가 AWS의 물리적 하드웨어에 어떻게 배치될지를 제어하는 기능
+
 누군가가 EC2 인스턴스 대체 정책(Strategy)을 컨트롤하고 싶을 때
 
 1. Placement Groups의 종류
+
    1. 클러스터(Cluster)
 
       ![photo/Untitled%205.png](photo/Untitled%205.png)
@@ -349,6 +365,7 @@ Spot Fleets
       - 장점: 좋은 네트워크(인스턴스 간 10Gbps 대역폭)
       - 단점: rack이 고장나면 모든 인스턴스 동시 고장
       - 사용: 빠르게 완료해야하는 빅데이터, 저지연성, 고효율 네트워크가 필요한 앱
+
    2. 스프레드(Spread)
 
       ![photo/Untitled%206.png](photo/Untitled%206.png)
@@ -357,6 +374,7 @@ Spot Fleets
       - 장점: 여러 AZ에 분산 배포, 물리적 분리, 동시 실패 리스크 감소
       - 단점: placement group 당 AZ 당 최대 7개
       - 사용: 고가용성이 필요한 앱, 중요한 앱
+
    3. 파티션(Partition)
 
       ![photo/Untitled%207.png](photo/Untitled%207.png)
@@ -364,7 +382,7 @@ Spot Fleets
       - 지역 내에 여러 AZ에 인스턴스 분산
       - AZ당 7개까지의 파티션, 파티션 당 100개까지의 인스턴스 배포
       - 다른 rack set의 의존적임
-      - 파티션 고장시 많은 많은 EC2 고장, 다른 파티션 영향은 x
+      - 파티션 고장시 많은 EC2 고장, 다른 파티션 영향은 x
       - EC2에서 메타데이터 같은 파티션 정보를 불러올 때
       - 사용: Hadoop, Cassandra, Kafka
 
@@ -372,15 +390,17 @@ Spot Fleets
 
 ### ENI(Elastic Network Interfaces)
 
-1. 가상 네트워크 카드를 나타내는 VPC의 논리적 요소
-2. ENI의 속성으로 설정 가능한 것들
-   - 사설 아이피(Private IPv4)에 하나, 또는 2개의 secondary ENI를 가짐
-   - 사설 아이피(Private IPv4)당 하나의 Elastic IP를 가짐
-   - 퍼블릭 아이피 할당 가능
-   - MAC 주소를 할당 가능
-   - 보안 그룹을 하나 이상 설정 가능
-3. 실패(failover)가 뜨면 EC2의 ENI를 때서 다른 ENI로 붙일 수 있음
-4. 한 AZ에 국한됨(bound)
+1. 가상 네트워크 카드, VPC 내에서 EC2 인스턴스에 연결하는 논리적 요소
+2. ENI의 속성
+   - ENI마다 고유한 MAC 주소가 자동으로 부여됨
+   - ENI마다 Primary Private IPv4 반드시 하나의 주소가 있음
+   - ENI마다 Secondary Private IPv4 주소를 여러 개 추가할 수 있음
+   - 각 Private IPv4 주소마다 하나의 Elastic IP(퍼블릭 IP를 고정)를 연결할 수 있음
+   - 서브넷이나 설정에 따라 퍼블릭 IP를 자동으로 할당할 수 있음
+   - ENI에 1개 이상의 보안 그룹을 연결할 수 있음
+3. ENI는 EC2에서 떼어 다른 인스턴스에 붙일 수 있음
+   - 장애가 나도 기존 IP와 설정을 그대로 승계
+4. ENI는 생성된 서브넷과 같은 AZ에서만 사용 가능, 다른 AZ로 옮길 수 없음
 
 ![photo/Untitled%208.png](photo/Untitled%208.png)
 
@@ -440,134 +460,197 @@ EC2의 여러가지 상태
 
 ### EBS(Elastic Block Store)
 
-- 네트워크 USB 스틱이라고 생각하면 됨
-  - 지연성이 있을 수도 있음, EC2 instance에 빠르게 탈부착 가능
-- 특정 AZ에 바인딩 되어 있음
-  - 다른 AZ에 부착 불가, 따라서 snapshot을 찍고 옮겨야 함
+- EBS(Elastic Block Store) Volume은 EC2 인스턴스에 연결하는 네트워크 드라이브
+- 비유: 네트워크 USB 스틱과 같음
+- 인스턴스 종료 후에도 데이터가 영구 저장 가능
+- 동시에 하나의 인스턴스에만 연결 가능 (CCP 수준)
+- 가용 영역(AZ)에 종속적 → 같은 리전이라도 다른 AZ로는 직접 이동 불가
+- 프리티어: 월 30GB 무료 (General Purpose SSD 또는 Magnetic)
+
+#### EBS Volume
+
+- 네트워크 기반이므로 물리 디스크 아님
+- 네트워크를 통해 연결되므로 약간의 지연(latency) 존재
+- EC2에서 분리(detach) 후 다른 인스턴스에 빠르게 연결 가능
 - **오직 한개의 인스턴스에 하나만** 마운트 가능(SAA 단계에서는)
   - 단 io1/io2 는 같은 AZ 내에서 멀티 마운트 가능
   - 각 인스턴스는 볼륨은 모든 읽기 쓰기 권한을 가짐
   - Must use a file system that’s cluster-aware(not XFS, EX4, etc…)
-- 프로비저닝된 용량만큼 비용 청구, 용량을 늘릴 수 있음
-- EC2 instance가 terminate되면 EBS 동작을 제어함
-  - 기본 세팅: root EBS 볼륨 삭제, 다른 연결된 EBS 볼륨 삭제는 x
-- 인스턴스 삭제되도 root volume 유지 가능
-- EBS Snapshots
-  - AZ나 Region간의 EBS 복사는 스냅샷을 통해서 가능
-  
-    ![photo/Untitled%2011.png](photo/Untitled%2011.png)
-  
-  - EBS volume에 백업을 만듬
-  - snapshot 찍을 때 탈착이 필수는 아니지만 추천
-  - AZ 나 Region 간 shapshot 복사 가능
+- 특정 AZ에 종속됨 → us-east-1a 볼륨을 us-east-1b에 연결 불가
+  - 이동하려면 반드시 스냅샷(snapshot) 생성 후 복원 필요
+- 용량(GB), IOPS를 프로비저닝하고 그에 따라 과금
+- 드라이브 용량은 시간이 지나면서 증가시킬 수 있음
+
+- 인스턴스 종료 시 EBS 볼륨 삭제 여부를 제어하는 속성
+  - 루트 볼륨(root): 기본적으로 삭제됨 (속성 활성화)
+  - 추가 연결된 볼륨(data): 기본적으로 삭제되지 않음 (속성 비활성화)
+- 속성은 콘솔 또는 AWS CLI에서 변경 가능
+- Use Case: 인스턴스 종료 후에도 루트 볼륨 데이터를 유지하고 싶을 때 설정 변경
+
+![photo/Untitled%2011.png](photo/Untitled%2011.png)
 
 ### EBS Snapshots
 
-- 특정 시간의 EBS를 백업(Back-up or Snapshots) 하는 것
-- 필수는 아니지만 추천
-- 스냅샷은 다른 AZ 나 Region으로 복사 가능
+- 특정 시점의 EBS 볼륨을 백업하는 기능
+- 볼륨을 분리하지 않고도 스냅샷 가능 (하지만 권장됨)
+- 스냅샷은 다른 AZ나 Region으로 복사 가능
 - 특징
   - Archive Tier: 그냥보다 75%정도 저렴, 24~72시간 후 복구 가능
-  - Recycle Bin: 실수로 복구했을 때 대비 복구 가능(1일~1년)
+  - Recycle Bin: 실수로 복구했을 때 대비, 1일~1년 이내 복구 가능
   - Fast Snapshot Restore(FSR): 빠르게 스냅샷 복구, 큰 스냅샷 추천, 비쌈
 
 ### AMI(Amazon Machine Image)
 
 - AMI는 EC2의 커스터마이제이션임
-  - 소프트웨어, 환경 구성, OS, 모니터링 등을 추가 가능
-  - 빠르게 boot / 환경 설정, 왜냐면 소프트웨어가 프리 패키징됬기 때문
-- 특정 지역으로 빌드됨(지역간 이동은 복사를 통해 가능)
+  - 소프트웨어, 설정, OS, 모니터링 툴 등을 추가해 이미지화
+  - 소프트웨어가 미리 패키징됨
+  - 빠르게 boot / 환경 설정
+- 특정 리전에 종속적으로 생성되지만, 다른 리전으로 복사 가능
 - EC2를 런칭하는 방법
-  - Public AMI: AWS제공
+  - Public AMI: AWS 제공
   - own AMI: 자체 커스터마이제이션
-  - Marketplace AMI: 누군가가 만들어 논 AMI(팔 수 있음)
+  - Marketplace AMI: 누군가가 만든 AMI(팔 수 있음)
 
-AMI의 절차
+#### AMI의 절차
 
 ![photo/Untitled%2012.png](photo/Untitled%2012.png)
 
 1. EC2 시작, 커스터마이징
-2. 인스턴스를 멈춤(데이터 무결성(integrity)를 위해)
-3. AMI 빌드(EBS 스냅샷도 생성)
-4. 다른 AMIs로 부터 인스턴스 런칭
+2. 데이터 무결성(integrity)를 위해 인스턴스를 멈춤
+3. AMI 빌드, 자동으로 EBS 스냅샷도 생성
+4. 생성된 AMI를 이용, 동일한 설정 인스턴스를 여러 개 실행 가능
 
 ### EC2 Instance Store
 
-- I/O 성능이 제일 좋음
-- EBS 볼륨은 네트워크 드라이브로 좋지만 성능에 제한이 있음
-- 고성능 하드디스크를 원하면 EC2 인스턴스 저장소(EC2 Instance Store)를 사용
-- EC2 인스턴스가 멈추면 저장소는 날라감
-  - 버퍼, 캐쉬, scratch data/temporary content에 적합함
-  - 하드웨어 장애시 데이터 손실 위함
-  - 백업이나 복구는 여러분의 책임!
+- EC2 인스턴스 저장소(EC2 Instance Store)는 물리 서버 디스크 기반
+- EBS는 네트워크 드라이브 기반, 성능이 아쉬움
+- EC2 인스턴스가 멈추면 저장소는 날라감(ephemeral)
+  - 버퍼, 캐쉬, 임시 데이터(scratch data/temporary content)에 적합함
+  - 하드웨어 장애시 데이터 손실 위험
+  - 백업이나 복구는 사용자 책임
 
 ### EBS Volume Types
 
 6개의 EBS 볼륨 타입이 있음
 
-- SSD 타입
-  - gp2 / gp3(SSD)
-    - General purpose(1GB ~ 16TB)
-    - 준수한 가격과 성능, low-latency, 일반적 목적
-    - IOPS 자동 조절, 볼륨 크기에 따라서
-  - io1 / io2(SSD)
-    - Highest-performance(4GB ~ 64TB)
-    - 저지연성 또는 고성능, Database workloads에 적합
-    - io1(4GB ~ 16TB), io2 Block Express(4GB ~ 64TB), MAX PIOPS 256,000, IOPS가 16,000 이상
-    - IOPS를 수동으로 조절
-- HDD 타입
-  - st1(HDD)
-    - Low cost
-    - frequently accessed
-    - 125GiB ~ 16TiB
-    - Big Data, Data Warehouses, Log Processing
-  - sc1(HDD)
-    - Cold HDD
-    - Lowest cost HDD
-    - less frequently accessed
-- SSD만 부트볼륨으로 사용 가능
+링크 -> <https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html>
+
+#### SSD 타입
+
+- gp2 / gp3(일반 목적의 SSD)
+  - 저비용, 범용적 성능, 저지연
+  - General purpose(1GB ~ 16TB)
+  - 사용 사례: 부팅 볼륨, 가상 데스크탑, 개발/테스트 환경
+
+| 구분                       | **gp2**                                             | **gp3**                                                                |
+| -------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------- |
+| **스토리지 타입**          | SSD (General Purpose)                               | SSD (General Purpose)                                                  |
+| **볼륨 크기 범위**         | 1 GiB \~ 16 TiB                                     | 1 GiB \~ 16 TiB                                                        |
+| **기본 IOPS**              | 3 IOPS/GB (볼륨 크기와 비례) 최대 16,000 IOPS       | **3,000 IOPS 고정 (기본)**                                             |
+| **Throughput**             | 최대 250 MiB/s (볼륨 크기에 따라 증가)              | **기본 125 MiB/s**, 최대 1,000 MiB/s                                   |
+| **IOPS & Throughput 설정** | 볼륨 크기와 종속적 → 따로 조정 불가                 | **독립적으로 조정 가능** IOPS 최대 16,000, Throughput 최대 1,000 MiB/s |
+| **성능 특징**              | 볼륨이 작으면 성능이 낮음 크기가 커질수록 성능 향상 | 작은 볼륨도 높은 성능 확보 가능 비용 대비 성능 최적화                  |
+| **비용**                   | 크기에 따라 IOPS 성능이 자동 증가 → 비효율 가능     | **더 저렴하고 성능 제어 가능**                                         |
+
+- io1 / io2(SSD)
+  - Highest-performance(4GB ~ 64TB)
+  - 저지연성 또는 고성능, Database workloads에 적합
+  - io1(4GB ~ 16TB), io2 Block Express(4GB ~ 64TB), MAX PIOPS 256,000, IOPS가 16,000 이상
+  - IOPS를 수동으로 조절
+
+| 구분                    | **io1**                                                                    | **io2 (Block Express)**                                    |
+| ----------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| **스토리지 타입**       | SSD (Provisioned IOPS SSD)                                                 | SSD (Provisioned IOPS SSD)                                 |
+| **볼륨 크기 범위**      | 4 GiB \~ 16 TiB                                                            | 4 GiB \~ 64 TiB                                            |
+| **최대 IOPS**           | 최대 **64,000 IOPS** (Nitro EC2 인스턴스) 그 외 인스턴스: 최대 32,000 IOPS | 최대 **256,000 IOPS** (IOPS\:GiB 비율 1,000:1)             |
+| **Throughput (대역폭)** | IOPS 비례, 최대 1,000 MiB/s 수준                                           | 최대 4,000 MiB/s (Block Express 기반)                      |
+| **지연시간 (Latency)**  | 밀리초 단위 (ms-level)                                                     | **서브 밀리초(sub-ms)** 지연                               |
+| **Multi-Attach 지원**   | 지원 (Nitro 인스턴스만)                                                    | **지원 (향상된 성능)**                                     |
+| **성능 특징**           | 지정한 PIOPS 성능 제공, 안정적                                             | **더 높은 내구성 (99.999%)**, **최고 성능 및 확장성 제공** |
+| **비용**                | 기존 대비 상대적으로 높음                                                  | io1 대비 **비용 효율성 개선**, 고성능 워크로드 최적        |
+
+#### HDD 타입
+
+- st1(HDD)
+  - Low cost
+  - frequently accessed
+  - 125GiB ~ 16TiB
+  - Big Data, Data Warehouses, Log Processing
+- sc1(HDD)
+  - Cold HDD
+  - Lowest cost HDD
+  - less frequently accessed
+- HDD는 부트볼륨으로 사용 불가
 - Size, Throughput(처리량), IOPS(I/O Ops Per Sec) 특징
+
+| 구분                      | **st1 (Throughput Optimized HDD)**          | **sc1 (Cold HDD)**                           |
+| ------------------------- | ------------------------------------------- | -------------------------------------------- |
+| **볼륨 타입**             | HDD (Throughput 최적화)                     | HDD (Cold, 저비용)                           |
+| **Boot Volume 가능 여부** | ❌ 불가                                     | ❌ 불가                                      |
+| **볼륨 크기 범위**        | 125 GiB \~ 16 TiB                           | 125 GiB \~ 16 TiB                            |
+| **최대 Throughput**       | **500 MiB/s**                               | **250 MiB/s**                                |
+| **최대 IOPS**             | **500 IOPS**                                | **250 IOPS**                                 |
+| **성능 특징**             | 자주 접근되는 대용량 데이터 처리에 최적화   | 접근 빈도가 낮은 데이터에 최저 비용으로 저장 |
+| **주요 Use Case**         | 빅데이터 분석, 데이터 웨어하우스, 로그 처리 | 장기 보관, 백업, 거의 접근하지 않는 데이터   |
 
 ### EBS Multi-Attach
 
-- 같은 AZ에 있는 최대 16개 까지 EC2를 같은 EBS에 붙일 수 있음
-- Read / Write 권한을 모두 가짐, 고성능을 위해
-- 무조건 클러스터를 인식하는 File System을 사용(XFS, EXT4 등 불가)
+- **io1 / io2** 타입의 EBS 볼륨만 지원
+- **동일 가용 영역(AZ)** 내 최대 **16개 EC2 인스턴스**에 동시에 연결 가능
+- 모든 인스턴스가 **읽기/쓰기 권한**을 가짐
+- 특징 및 주의사항
+  - 고성능 공유 스토리지 제공
+  - **클러스터형 Linux 애플리케이션**에서 고가용성 확보
+  - **동시 쓰기 충돌**은 애플리케이션 또는 파일 시스템 수준에서 직접 제어해야 함
+  - **클러스터 인식 파일 시스템** 필수 (예: GFS2, OCFS2)
+  - 일반 파일 시스템 (예: EXT4, XFS)은 사용 불가 – 데이터 손상 위험
+- 사용 예시
+  - Teradata, Oracle RAC 등 HA 클러스터
 
 ![photo/Untitled%2019.png](photo/Untitled%2019.png)
 
 ### EBS Encryption
 
-- 암호화 EBS 볼륨을 만들면 다음을 따릅니다.
-  - 볼륨의 유휴(at rest)데이터는 암호화
-  - 인스턴스와 볼륨간 이동 중인 모든 데이터는 암호화
-  - 모든 스냅샷은 암호화
-  - 모든 볼륨은 스냅샷으로부터 만들어 짐
-- 암/복호화는 투명하게 다뤄짐(당신은 할게 없음)
-- EBS 암호화는 KMS(AES-256)에서 활용됨
-- 암호화되지 볼륨을 스냅샷하면 암호화
+- 암호화 EBS 볼륨을 만들면 아래 자동 적용
+  - 볼륨의 내부(at rest) 데이터는 암호화
+  - 인스턴스와 볼륨간 전송중인(in transit) 모든 데이터는 암호화
+  - 모든 스냅샷도 암호화
+  - 스냅샷으로 생성된 새 볼륨도 암호화
+- EBS 암호화는 KMS(AES-256)에서 활용
+- 암/복호화는 투명하게 다처리(개입x)
+- 암호화는 지연(latency) 거의 없음
+
+### 암호화 되지 않은 EBS 암호화하기
+
+1. 비암호화 EBS 볼륨의 스냅샷 생성
+2. 해당 스냅샷을 복사하며 암호화
+3. 암호화된 스냅샷으로부터 새 EBS 볼륨 생성
+4. 새 암호화 볼륨을 기존 인스턴스에 부착
 
 ### EFS
 
-EFS: 관리형 NFS(Network File System)
+EFS(Elastic File System)란? 완전 관리형 NFS(Network File System)
 
-- EFS는 여러 AZ의 EC2 인스턴스에서 작동(Regional, One Zone 선택 가능)
-- 많은 EC2에 마운트 가능
-- 고가용성, 고확장성, 비쌈, 사용만큼 비용 지불
-- 사용 사례: content 관리, 웹 보조, 데이터 쉐어링, 워드프레스
-- NFSv4.1 프로토콜 사용
-- Security Group: EFS의 접근하려면 사용
-- Linux 호환: Linux based AMI(Windows는 아님)
-- KMS: 사용해서 암호화
-- POSIX file system: 리눅스의 기본 file API임
-- File System은 자동 스케일, 사용만큼 지불, 용량 설정ㄴㄴ
+- EC2 인스턴스 여러 대에서 공유 마운트 가능
+- Multi-AZ 지원으로 고가용성 보장
+- Linux 기반 AMI 전용, Windows와는 호환되지 않음
+- POSIX 호환 파일 시스템, 표준 파일 API 사용
+- 암호화 지원: KMS 기반 암호화
+- 보안 그룹(Security Group)으로 접근 제어
+- 자동 스케일링, 용량 계획 불필요
+- 비용: gp2 대비 약 3배 높음 (그러나 사용량 기반 과금)
+- 사용 사례
+  - content 관리(CMS)
+  - 파일 공유형 웹사이트(워드프레스 등)
+  - 데이터 쉐어링 시스템
+  - 워크플로우, 미디어 처리 등 고 병렬 환경
 
 ![photo/Untitled%2020.png](photo/Untitled%2020.png)
 
 - 성능
   - 1000s개의 동시 nfs 클라이언트, 10GB+/s 처리량
   - 자동으로 Peta 용량까지 지원
-- Storage Classes
+- Storage Classesb
   - 90%까지 할인
   - Storage Tiers
     - Standard: 자주 엑세스 되는 파일
@@ -755,6 +838,17 @@ S3 as an Origin
 ## Section 24: AWS Monitoring & Audit: CloudWatch, CloudTrail & Config
 
 ## Section 25: Identity and Access Management (IAM) - Advanced
+
+### AWS Directory Services
+
+Microsoft Active Driectory(AD)란?
+
+- Found on any Windows Server with AD Domain Services
+- Database of objects: User, Accounts, Computers, Printers, File Shares, Security Groups
+- Centralized security management, create account, assign permissions
+- Objects are organized in trees
+- A group of trees is a forest
+- AD 도메인 서비스가 설치된 윈도우 서버에서 제공
 
 ## Section 26: AWS Security & Encryption: KMS, SSM Parameter Store, CloudHSM, Shield, …
 

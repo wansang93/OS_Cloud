@@ -1,5 +1,10 @@
 # AWS
 
+## Docs
+
+- [FTR](./Docs/FTR.md)
+- [Quicksight](./Docs/Quicksight.md)
+
 ## Education
 
 ### AI / Data
@@ -26,7 +31,7 @@
 - ⭐[Udemy: AWS Certified Solutions Architect Associate](./AWS%20Certified%20Solutions%20Architect%20Associate/README.md)
 - [AWS training: AWS Certified Solutions Architect Associate(Digital)](./AWS%20Certified%20Solutions%20Architect%20Associate%20(Digital)/README.md)
 
-## Hands On Lab
+## Cloud Guru Hands On Lab
 
 <details>
 <summary>더 보기</summary>
